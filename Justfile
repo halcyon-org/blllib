@@ -3,14 +3,22 @@ set export
 default:
   @just --list
 
-setup:
+setup: setup-py setup-pnpm
+
+setup-py:
   python3 -m venv env
   env/bin/pip3 install .
+
+setup-pnpm:
+  pnpm i --frozen-lockfile
 
 setup-dev:
   python3 -m venv env
   env/bin/pip3 install algorithm-lib[dev]
   env/bin/pip3 install -e .
+
+gen: setup-pnpm
+  pnpm run gen
   
 check: lint test type
 

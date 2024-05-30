@@ -1,0 +1,15 @@
+{
+  "name": "algorithm-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gen": "openapi-generator-cli generate -i ./belifeline-schema/schema/@typespec/openapi3/openapi.yaml -g python -o ./src/algorithm_lib/api"
+  },
+  "keywords": [],
+  "author": "shiron-dev <shiron4710.dev@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.13.4"
+  }
+}
