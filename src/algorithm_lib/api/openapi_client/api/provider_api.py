@@ -18,16 +18,16 @@ from typing_extensions import Annotated
 
 from pydantic import StrictFloat, StrictInt, StrictStr
 from typing import List, Optional, Union
-from algorithm_lib.models.algorithm_algorithm_data import AlgorithmAlgorithmData
-from algorithm_lib.models.algorithm_algorithm_infomation import AlgorithmAlgorithmInfomation
-from algorithm_lib.models.provider_client_data import ProviderClientData
-from algorithm_lib.models.provider_request_type import ProviderRequestType
-from algorithm_lib.models.types_date_date_until import TypesDateDateUntil
-from algorithm_lib.models.types_geo_json_multi_polygon import TypesGeoJSONMultiPolygon
+from openapi_client.models.algorithm_algorithm_data import AlgorithmAlgorithmData
+from openapi_client.models.algorithm_algorithm_infomation import AlgorithmAlgorithmInfomation
+from openapi_client.models.provider_client_data import ProviderClientData
+from openapi_client.models.provider_request_type import ProviderRequestType
+from openapi_client.models.types_date_date_until import TypesDateDateUntil
+from openapi_client.models.types_geo_json_multi_polygon import TypesGeoJSONMultiPolygon
 
-from algorithm_lib.api_client import ApiClient, RequestSerialized
-from algorithm_lib.api_response import ApiResponse
-from algorithm_lib.rest import RESTResponseType
+from openapi_client.api_client import ApiClient, RequestSerialized
+from openapi_client.api_response import ApiResponse
+from openapi_client.rest import RESTResponseType
 
 
 class ProviderApi:

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from algorithm_lib.models.algorithm_create_request import AlgorithmCreateRequest
+from openapi_client.models.algorithm_create_request import AlgorithmCreateRequest
 
 # TODO update the JSON string below
 json = "{}"

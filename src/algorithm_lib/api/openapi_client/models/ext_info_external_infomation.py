@@ -18,24 +18,23 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, ConfigDict, StrictBytes, StrictFloat, StrictInt, StrictStr
-from typing import Any, ClassVar, Dict, List, Union
-from algorithm_lib.models.algorithm_data_type import AlgorithmDataType
+from pydantic import BaseModel, ConfigDict, StrictStr
+from typing import Any, ClassVar, Dict, List
+from openapi_client.models.ext_info_ext_info_id import ExtInfoExtInfoId
 from typing import Optional, Set
 from typing_extensions import Self
 
-class AlgorithmAlgorithmData(BaseModel):
+class ExtInfoExternalInfomation(BaseModel):
     """
-    AlgorithmAlgorithmData
+    ExtInfoExternalInfomation
     """ # noqa: E501
-    algorithm_id: StrictStr
-    algorithm_data_id: StrictStr
-    algorithm_scale: Union[StrictFloat, StrictInt]
-    content_type: AlgorithmDataType
-    content: Union[StrictBytes, StrictStr]
-    entry_at: datetime
-    target_at: datetime
-    __properties: ClassVar[List[str]] = ["algorithm_id", "algorithm_data_id", "algorithm_scale", "content_type", "content", "entry_at", "target_at"]
+    external_id: ExtInfoExtInfoId
+    external_name: StrictStr
+    external_description: StrictStr
+    first_entry_at: datetime
+    last_updated_at: datetime
+    updated_history: List[datetime]
+    __properties: ClassVar[List[str]] = ["external_id", "external_name", "external_description", "first_entry_at", "last_updated_at", "updated_history"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -55,7 +54,7 @@ class AlgorithmAlgorithmData(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of AlgorithmAlgorithmData from a JSON string"""
+        """Create an instance of ExtInfoExternalInfomation from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -80,7 +79,7 @@ class AlgorithmAlgorithmData(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of AlgorithmAlgorithmData from a dict"""
+        """Create an instance of ExtInfoExternalInfomation from a dict"""
         if obj is None:
             return None
 
@@ -88,13 +87,12 @@ class AlgorithmAlgorithmData(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "algorithm_id": obj.get("algorithm_id"),
-            "algorithm_data_id": obj.get("algorithm_data_id"),
-            "algorithm_scale": obj.get("algorithm_scale"),
-            "content_type": obj.get("content_type"),
-            "content": obj.get("content"),
-            "entry_at": obj.get("entry_at"),
-            "target_at": obj.get("target_at")
+            "external_id": obj.get("external_id"),
+            "external_name": obj.get("external_name"),
+            "external_description": obj.get("external_description"),
+            "first_entry_at": obj.get("first_entry_at"),
+            "last_updated_at": obj.get("last_updated_at"),
+            "updated_history": obj.get("updated_history")
         })
         return _obj
 

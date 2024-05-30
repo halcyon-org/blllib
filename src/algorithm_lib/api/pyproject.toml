@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "algorithm_lib"
+name = "openapi_client"
 version = "1.0.0"
 description = "BeLifeline Server API"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
@@ -7,7 +7,7 @@ license = "NoLicense"
 readme = "README.md"
 repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
 keywords = ["OpenAPI", "OpenAPI-Generator", "BeLifeline Server API"]
-include = ["algorithm_lib/py.typed"]
+include = ["openapi_client/py.typed"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
@@ -34,7 +34,7 @@ extension-pkg-whitelist = "pydantic"
 
 [tool.mypy]
 files = [
-  "algorithm_lib",
+  "openapi_client",
   #"test",  # auto-generated tests
   "tests", # hand-written tests
 ]

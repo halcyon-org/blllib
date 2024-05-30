@@ -19,16 +19,16 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List
-from algorithm_lib.models.ext_info_external_infomation_create import ExtInfoExternalInfomationCreate
+from openapi_client.models.algorithm_algorithm_infomation_create_or_update import AlgorithmAlgorithmInfomationCreateOrUpdate
 from typing import Optional, Set
 from typing_extensions import Self
 
-class ExtInfoCreateRequest(BaseModel):
+class EachAlgorithmUpdateRequest(BaseModel):
     """
-    ExtInfoCreateRequest
+    EachAlgorithmUpdateRequest
     """ # noqa: E501
-    extinfo: ExtInfoExternalInfomationCreate
-    __properties: ClassVar[List[str]] = ["extinfo"]
+    update_algorithm: AlgorithmAlgorithmInfomationCreateOrUpdate
+    __properties: ClassVar[List[str]] = ["update_algorithm"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -48,7 +48,7 @@ class ExtInfoCreateRequest(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ExtInfoCreateRequest from a JSON string"""
+        """Create an instance of EachAlgorithmUpdateRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -69,14 +69,14 @@ class ExtInfoCreateRequest(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of extinfo
-        if self.extinfo:
-            _dict['extinfo'] = self.extinfo.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of update_algorithm
+        if self.update_algorithm:
+            _dict['update_algorithm'] = self.update_algorithm.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ExtInfoCreateRequest from a dict"""
+        """Create an instance of EachAlgorithmUpdateRequest from a dict"""
         if obj is None:
             return None
 
@@ -84,7 +84,7 @@ class ExtInfoCreateRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "extinfo": ExtInfoExternalInfomationCreate.from_dict(obj["extinfo"]) if obj.get("extinfo") is not None else None
+            "update_algorithm": AlgorithmAlgorithmInfomationCreateOrUpdate.from_dict(obj["update_algorithm"]) if obj.get("update_algorithm") is not None else None
         })
         return _obj
 

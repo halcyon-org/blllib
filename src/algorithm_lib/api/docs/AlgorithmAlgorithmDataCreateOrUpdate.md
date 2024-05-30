@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from algorithm_lib.models.algorithm_algorithm_data_create_or_update import AlgorithmAlgorithmDataCreateOrUpdate
+from openapi_client.models.algorithm_algorithm_data_create_or_update import AlgorithmAlgorithmDataCreateOrUpdate
 
 # TODO update the JSON string below
 json = "{}"

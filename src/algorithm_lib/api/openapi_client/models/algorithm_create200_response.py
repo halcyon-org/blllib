@@ -17,15 +17,16 @@ import pprint
 import re  # noqa: F401
 import json
 
+from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Union
-from algorithm_lib.models.ext_info_ext_info_id import ExtInfoExtInfoId
+from openapi_client.models.ext_info_ext_info_id import ExtInfoExtInfoId
 from typing import Optional, Set
 from typing_extensions import Self
 
-class AlgorithmAlgorithmInfomationCreateOrUpdate(BaseModel):
+class AlgorithmCreate200Response(BaseModel):
     """
-    AlgorithmAlgorithmInfomationCreateOrUpdate
+    AlgorithmCreate200Response
     """ # noqa: E501
     algorithm_id: StrictStr = Field(description="From Admin API")
     algorithm_name: StrictStr
@@ -33,7 +34,11 @@ class AlgorithmAlgorithmInfomationCreateOrUpdate(BaseModel):
     need_external: List[ExtInfoExtInfoId]
     algorithm_scales: List[Union[StrictFloat, StrictInt]]
     algorithm_data_ids: List[StrictStr]
-    __properties: ClassVar[List[str]] = ["algorithm_id", "algorithm_name", "algorithm_description", "need_external", "algorithm_scales", "algorithm_data_ids"]
+    first_entry_at: datetime
+    last_entry_at: datetime
+    last_updated_at: datetime
+    bearer_token: StrictStr
+    __properties: ClassVar[List[str]] = ["algorithm_id", "algorithm_name", "algorithm_description", "need_external", "algorithm_scales", "algorithm_data_ids", "first_entry_at", "last_entry_at", "last_updated_at", "bearer_token"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -53,7 +58,7 @@ class AlgorithmAlgorithmInfomationCreateOrUpdate(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of AlgorithmAlgorithmInfomationCreateOrUpdate from a JSON string"""
+        """Create an instance of AlgorithmCreate200Response from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -78,7 +83,7 @@ class AlgorithmAlgorithmInfomationCreateOrUpdate(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of AlgorithmAlgorithmInfomationCreateOrUpdate from a dict"""
+        """Create an instance of AlgorithmCreate200Response from a dict"""
         if obj is None:
             return None
 
@@ -91,7 +96,11 @@ class AlgorithmAlgorithmInfomationCreateOrUpdate(BaseModel):
             "algorithm_description": obj.get("algorithm_description"),
             "need_external": obj.get("need_external"),
             "algorithm_scales": obj.get("algorithm_scales"),
-            "algorithm_data_ids": obj.get("algorithm_data_ids")
+            "algorithm_data_ids": obj.get("algorithm_data_ids"),
+            "first_entry_at": obj.get("first_entry_at"),
+            "last_entry_at": obj.get("last_entry_at"),
+            "last_updated_at": obj.get("last_updated_at"),
+            "bearer_token": obj.get("bearer_token")
         })
         return _obj
 

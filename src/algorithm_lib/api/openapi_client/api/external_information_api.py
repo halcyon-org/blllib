@@ -18,14 +18,14 @@ from typing_extensions import Annotated
 
 from pydantic import StrictInt
 from typing import List, Optional
-from algorithm_lib.models.ext_info_ext_info_id import ExtInfoExtInfoId
-from algorithm_lib.models.ext_info_external_infomation import ExtInfoExternalInfomation
-from algorithm_lib.models.hoge_get200_response_inner import HogeGet200ResponseInner
-from algorithm_lib.models.types_geo_json_multi_polygon import TypesGeoJSONMultiPolygon
+from openapi_client.models.ext_info_ext_info_id import ExtInfoExtInfoId
+from openapi_client.models.ext_info_external_infomation import ExtInfoExternalInfomation
+from openapi_client.models.hoge_get200_response_inner import HogeGet200ResponseInner
+from openapi_client.models.types_geo_json_multi_polygon import TypesGeoJSONMultiPolygon
 
-from algorithm_lib.api_client import ApiClient, RequestSerialized
-from algorithm_lib.api_response import ApiResponse
-from algorithm_lib.rest import RESTResponseType
+from openapi_client.api_client import ApiClient, RequestSerialized
+from openapi_client.api_response import ApiResponse
+from openapi_client.rest import RESTResponseType
 
 
 class ExternalInformationApi:

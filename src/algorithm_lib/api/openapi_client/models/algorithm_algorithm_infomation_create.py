@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Union
-from algorithm_lib.models.ext_info_ext_info_id import ExtInfoExtInfoId
+from openapi_client.models.ext_info_ext_info_id import ExtInfoExtInfoId
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -1,4 +1,4 @@
-# algorithm_lib.AdminApi
+# openapi_client.AdminApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,15 +22,15 @@ Method | HTTP request | Description
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import algorithm_lib
-from algorithm_lib.models.algorithm_create200_response import AlgorithmCreate200Response
-from algorithm_lib.models.algorithm_create_request import AlgorithmCreateRequest
-from algorithm_lib.rest import ApiException
+import openapi_client
+from openapi_client.models.algorithm_create200_response import AlgorithmCreate200Response
+from openapi_client.models.algorithm_create_request import AlgorithmCreateRequest
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = algorithm_lib.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -46,10 +46,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with algorithm_lib.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = algorithm_lib.AdminApi(api_client)
-    algorithm_create_request = algorithm_lib.AlgorithmCreateRequest() # AlgorithmCreateRequest | 
+    api_instance = openapi_client.AdminApi(api_client)
+    algorithm_create_request = openapi_client.AlgorithmCreateRequest() # AlgorithmCreateRequest | 
 
     try:
         api_response = api_instance.algorithm_create(algorithm_create_request)
@@ -99,14 +99,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import algorithm_lib
-from algorithm_lib.models.algorithm_delete200_response import AlgorithmDelete200Response
-from algorithm_lib.rest import ApiException
+import openapi_client
+from openapi_client.models.algorithm_delete200_response import AlgorithmDelete200Response
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = algorithm_lib.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -122,9 +122,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with algorithm_lib.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = algorithm_lib.AdminApi(api_client)
+    api_instance = openapi_client.AdminApi(api_client)
     algorithm_id = 'algorithm_id_example' # str | 
 
     try:
@@ -175,15 +175,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import algorithm_lib
-from algorithm_lib.models.client_create_request import ClientCreateRequest
-from algorithm_lib.models.provider_client_data import ProviderClientData
-from algorithm_lib.rest import ApiException
+import openapi_client
+from openapi_client.models.client_create_request import ClientCreateRequest
+from openapi_client.models.provider_client_data import ProviderClientData
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = algorithm_lib.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -199,10 +199,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with algorithm_lib.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = algorithm_lib.AdminApi(api_client)
-    client_create_request = algorithm_lib.ClientCreateRequest() # ClientCreateRequest | 
+    api_instance = openapi_client.AdminApi(api_client)
+    client_create_request = openapi_client.ClientCreateRequest() # ClientCreateRequest | 
 
     try:
         api_response = api_instance.client_create(client_create_request)
@@ -252,14 +252,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import algorithm_lib
-from algorithm_lib.models.client_delete200_response import ClientDelete200Response
-from algorithm_lib.rest import ApiException
+import openapi_client
+from openapi_client.models.client_delete200_response import ClientDelete200Response
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = algorithm_lib.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -275,9 +275,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with algorithm_lib.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = algorithm_lib.AdminApi(api_client)
+    api_instance = openapi_client.AdminApi(api_client)
     client_id = 'client_id_example' # str | 
 
     try:
@@ -328,15 +328,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import algorithm_lib
-from algorithm_lib.models.ext_info_create200_response import ExtInfoCreate200Response
-from algorithm_lib.models.ext_info_create_request import ExtInfoCreateRequest
-from algorithm_lib.rest import ApiException
+import openapi_client
+from openapi_client.models.ext_info_create200_response import ExtInfoCreate200Response
+from openapi_client.models.ext_info_create_request import ExtInfoCreateRequest
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = algorithm_lib.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -352,10 +352,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with algorithm_lib.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = algorithm_lib.AdminApi(api_client)
-    ext_info_create_request = algorithm_lib.ExtInfoCreateRequest() # ExtInfoCreateRequest | 
+    api_instance = openapi_client.AdminApi(api_client)
+    ext_info_create_request = openapi_client.ExtInfoCreateRequest() # ExtInfoCreateRequest | 
 
     try:
         api_response = api_instance.ext_info_create(ext_info_create_request)
@@ -405,15 +405,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import algorithm_lib
-from algorithm_lib.models.ext_info_delete200_response import ExtInfoDelete200Response
-from algorithm_lib.models.ext_info_ext_info_id import ExtInfoExtInfoId
-from algorithm_lib.rest import ApiException
+import openapi_client
+from openapi_client.models.ext_info_delete200_response import ExtInfoDelete200Response
+from openapi_client.models.ext_info_ext_info_id import ExtInfoExtInfoId
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = algorithm_lib.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -429,10 +429,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with algorithm_lib.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = algorithm_lib.AdminApi(api_client)
-    extinfo_id = algorithm_lib.ExtInfoExtInfoId() # ExtInfoExtInfoId | 
+    api_instance = openapi_client.AdminApi(api_client)
+    extinfo_id = openapi_client.ExtInfoExtInfoId() # ExtInfoExtInfoId | 
 
     try:
         api_response = api_instance.ext_info_delete(extinfo_id)

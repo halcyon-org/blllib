@@ -17,18 +17,27 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict
-from typing import Any, ClassVar, Dict, List
-from algorithm_lib.models.algorithm_algorithm_infomation_create import AlgorithmAlgorithmInfomationCreate
+from datetime import datetime
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Union
+from openapi_client.models.ext_info_ext_info_id import ExtInfoExtInfoId
 from typing import Optional, Set
 from typing_extensions import Self
 
-class AlgorithmCreateRequest(BaseModel):
+class AlgorithmAlgorithmInfomation(BaseModel):
     """
-    AlgorithmCreateRequest
+    AlgorithmAlgorithmInfomation
     """ # noqa: E501
-    algorithm: AlgorithmAlgorithmInfomationCreate
-    __properties: ClassVar[List[str]] = ["algorithm"]
+    algorithm_id: StrictStr = Field(description="From Admin API")
+    algorithm_name: StrictStr
+    algorithm_description: StrictStr
+    need_external: List[ExtInfoExtInfoId]
+    algorithm_scales: List[Union[StrictFloat, StrictInt]]
+    algorithm_data_ids: List[StrictStr]
+    first_entry_at: datetime
+    last_entry_at: datetime
+    last_updated_at: datetime
+    __properties: ClassVar[List[str]] = ["algorithm_id", "algorithm_name", "algorithm_description", "need_external", "algorithm_scales", "algorithm_data_ids", "first_entry_at", "last_entry_at", "last_updated_at"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -48,7 +57,7 @@ class AlgorithmCreateRequest(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of AlgorithmCreateRequest from a JSON string"""
+        """Create an instance of AlgorithmAlgorithmInfomation from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -69,14 +78,11 @@ class AlgorithmCreateRequest(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of algorithm
-        if self.algorithm:
-            _dict['algorithm'] = self.algorithm.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of AlgorithmCreateRequest from a dict"""
+        """Create an instance of AlgorithmAlgorithmInfomation from a dict"""
         if obj is None:
             return None
 
@@ -84,7 +90,15 @@ class AlgorithmCreateRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "algorithm": AlgorithmAlgorithmInfomationCreate.from_dict(obj["algorithm"]) if obj.get("algorithm") is not None else None
+            "algorithm_id": obj.get("algorithm_id"),
+            "algorithm_name": obj.get("algorithm_name"),
+            "algorithm_description": obj.get("algorithm_description"),
+            "need_external": obj.get("need_external"),
+            "algorithm_scales": obj.get("algorithm_scales"),
+            "algorithm_data_ids": obj.get("algorithm_data_ids"),
+            "first_entry_at": obj.get("first_entry_at"),
+            "last_entry_at": obj.get("last_entry_at"),
+            "last_updated_at": obj.get("last_updated_at")
         })
         return _obj
 

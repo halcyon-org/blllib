@@ -17,24 +17,18 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import datetime
-from pydantic import BaseModel, ConfigDict, StrictStr
+from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List
-from algorithm_lib.models.ext_info_ext_info_id import ExtInfoExtInfoId
+from openapi_client.models.provider_client_data_create import ProviderClientDataCreate
 from typing import Optional, Set
 from typing_extensions import Self
 
-class ExtInfoExternalInfomation(BaseModel):
+class ClientCreateRequest(BaseModel):
     """
-    ExtInfoExternalInfomation
+    ClientCreateRequest
     """ # noqa: E501
-    external_id: ExtInfoExtInfoId
-    external_name: StrictStr
-    external_description: StrictStr
-    first_entry_at: datetime
-    last_updated_at: datetime
-    updated_history: List[datetime]
-    __properties: ClassVar[List[str]] = ["external_id", "external_name", "external_description", "first_entry_at", "last_updated_at", "updated_history"]
+    client: ProviderClientDataCreate
+    __properties: ClassVar[List[str]] = ["client"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -54,7 +48,7 @@ class ExtInfoExternalInfomation(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ExtInfoExternalInfomation from a JSON string"""
+        """Create an instance of ClientCreateRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -75,11 +69,14 @@ class ExtInfoExternalInfomation(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of client
+        if self.client:
+            _dict['client'] = self.client.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ExtInfoExternalInfomation from a dict"""
+        """Create an instance of ClientCreateRequest from a dict"""
         if obj is None:
             return None
 
@@ -87,12 +84,7 @@ class ExtInfoExternalInfomation(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "external_id": obj.get("external_id"),
-            "external_name": obj.get("external_name"),
-            "external_description": obj.get("external_description"),
-            "first_entry_at": obj.get("first_entry_at"),
-            "last_updated_at": obj.get("last_updated_at"),
-            "updated_history": obj.get("updated_history")
+            "client": ProviderClientDataCreate.from_dict(obj["client"]) if obj.get("client") is not None else None
         })
         return _obj
 

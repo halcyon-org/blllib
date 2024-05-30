@@ -18,26 +18,24 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictBytes, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Union
-from algorithm_lib.models.ext_info_ext_info_id import ExtInfoExtInfoId
+from openapi_client.models.algorithm_data_type import AlgorithmDataType
 from typing import Optional, Set
 from typing_extensions import Self
 
-class AlgorithmAlgorithmInfomation(BaseModel):
+class AlgorithmAlgorithmData(BaseModel):
     """
-    AlgorithmAlgorithmInfomation
+    AlgorithmAlgorithmData
     """ # noqa: E501
-    algorithm_id: StrictStr = Field(description="From Admin API")
-    algorithm_name: StrictStr
-    algorithm_description: StrictStr
-    need_external: List[ExtInfoExtInfoId]
-    algorithm_scales: List[Union[StrictFloat, StrictInt]]
-    algorithm_data_ids: List[StrictStr]
-    first_entry_at: datetime
-    last_entry_at: datetime
-    last_updated_at: datetime
-    __properties: ClassVar[List[str]] = ["algorithm_id", "algorithm_name", "algorithm_description", "need_external", "algorithm_scales", "algorithm_data_ids", "first_entry_at", "last_entry_at", "last_updated_at"]
+    algorithm_id: StrictStr
+    algorithm_data_id: StrictStr
+    algorithm_scale: Union[StrictFloat, StrictInt]
+    content_type: AlgorithmDataType
+    content: Union[StrictBytes, StrictStr]
+    entry_at: datetime
+    target_at: datetime
+    __properties: ClassVar[List[str]] = ["algorithm_id", "algorithm_data_id", "algorithm_scale", "content_type", "content", "entry_at", "target_at"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -57,7 +55,7 @@ class AlgorithmAlgorithmInfomation(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of AlgorithmAlgorithmInfomation from a JSON string"""
+        """Create an instance of AlgorithmAlgorithmData from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -82,7 +80,7 @@ class AlgorithmAlgorithmInfomation(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of AlgorithmAlgorithmInfomation from a dict"""
+        """Create an instance of AlgorithmAlgorithmData from a dict"""
         if obj is None:
             return None
 
@@ -91,14 +89,12 @@ class AlgorithmAlgorithmInfomation(BaseModel):
 
         _obj = cls.model_validate({
             "algorithm_id": obj.get("algorithm_id"),
-            "algorithm_name": obj.get("algorithm_name"),
-            "algorithm_description": obj.get("algorithm_description"),
-            "need_external": obj.get("need_external"),
-            "algorithm_scales": obj.get("algorithm_scales"),
-            "algorithm_data_ids": obj.get("algorithm_data_ids"),
-            "first_entry_at": obj.get("first_entry_at"),
-            "last_entry_at": obj.get("last_entry_at"),
-            "last_updated_at": obj.get("last_updated_at")
+            "algorithm_data_id": obj.get("algorithm_data_id"),
+            "algorithm_scale": obj.get("algorithm_scale"),
+            "content_type": obj.get("content_type"),
+            "content": obj.get("content"),
+            "entry_at": obj.get("entry_at"),
+            "target_at": obj.get("target_at")
         })
         return _obj
 

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from algorithm_lib.models.ext_info_external_infomation_create import ExtInfoExternalInfomationCreate
+from openapi_client.models.ext_info_external_infomation_create import ExtInfoExternalInfomationCreate
 
 # TODO update the JSON string below
 json = "{}"

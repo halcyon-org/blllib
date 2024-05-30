@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from algorithm_lib.models.provider_client_data_create import ProviderClientDataCreate
+from openapi_client.models.provider_client_data_create import ProviderClientDataCreate
 
 # TODO update the JSON string below
 json = "{}"

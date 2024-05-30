@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from algorithm_lib.models.types_geo_json_point import TypesGeoJSONPoint
+from openapi_client.models.types_geo_json_point import TypesGeoJSONPoint
 
 # TODO update the JSON string below
 json = "{}"

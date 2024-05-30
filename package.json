@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gen": "openapi-generator-cli generate -i ./belifeline-schema/schema/@typespec/openapi3/openapi.yaml -g python -o ./src/algorithm_lib/api --package-name algorithm_lib"
+    "gen": "openapi-generator-cli generate -i ./belifeline-schema/schema/@typespec/openapi3/openapi.yaml -g python -o ./src/algorithm_lib/api --package-name openapi_client"
   },
   "keywords": [],
   "author": "shiron-dev <shiron4710.dev@gmail.com>",

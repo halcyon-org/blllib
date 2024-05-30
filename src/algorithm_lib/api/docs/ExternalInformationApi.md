@@ -1,4 +1,4 @@
-# algorithm_lib.ExternalInformationApi
+# openapi_client.ExternalInformationApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,15 +19,15 @@ Method | HTTP request | Description
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import algorithm_lib
-from algorithm_lib.models.ext_info_ext_info_id import ExtInfoExtInfoId
-from algorithm_lib.models.ext_info_external_infomation import ExtInfoExternalInfomation
-from algorithm_lib.rest import ApiException
+import openapi_client
+from openapi_client.models.ext_info_ext_info_id import ExtInfoExtInfoId
+from openapi_client.models.ext_info_external_infomation import ExtInfoExternalInfomation
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = algorithm_lib.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -43,10 +43,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with algorithm_lib.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = algorithm_lib.ExternalInformationApi(api_client)
-    extinfo_id = algorithm_lib.ExtInfoExtInfoId() # ExtInfoExtInfoId | 
+    api_instance = openapi_client.ExternalInformationApi(api_client)
+    extinfo_id = openapi_client.ExtInfoExtInfoId() # ExtInfoExtInfoId | 
 
     try:
         api_response = api_instance.each_ext_info_get(extinfo_id)
@@ -96,14 +96,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import algorithm_lib
-from algorithm_lib.models.ext_info_external_infomation import ExtInfoExternalInfomation
-from algorithm_lib.rest import ApiException
+import openapi_client
+from openapi_client.models.ext_info_external_infomation import ExtInfoExternalInfomation
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = algorithm_lib.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -119,9 +119,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with algorithm_lib.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = algorithm_lib.ExternalInformationApi(api_client)
+    api_instance = openapi_client.ExternalInformationApi(api_client)
     limit = 56 # int |  (optional)
 
     try:
@@ -172,15 +172,15 @@ Name | Type | Description  | Notes
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import algorithm_lib
-from algorithm_lib.models.hoge_get200_response_inner import HogeGet200ResponseInner
-from algorithm_lib.models.types_geo_json_multi_polygon import TypesGeoJSONMultiPolygon
-from algorithm_lib.rest import ApiException
+import openapi_client
+from openapi_client.models.hoge_get200_response_inner import HogeGet200ResponseInner
+from openapi_client.models.types_geo_json_multi_polygon import TypesGeoJSONMultiPolygon
+from openapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = algorithm_lib.Configuration(
+configuration = openapi_client.Configuration(
     host = "http://localhost"
 )
 
@@ -196,10 +196,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with algorithm_lib.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = algorithm_lib.ExternalInformationApi(api_client)
-    area = algorithm_lib.TypesGeoJSONMultiPolygon() # TypesGeoJSONMultiPolygon |  (optional)
+    api_instance = openapi_client.ExternalInformationApi(api_client)
+    area = openapi_client.TypesGeoJSONMultiPolygon() # TypesGeoJSONMultiPolygon |  (optional)
 
     try:
         api_response = api_instance.hoge_get(area=area)

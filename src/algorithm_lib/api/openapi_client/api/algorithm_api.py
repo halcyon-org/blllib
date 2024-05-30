@@ -18,14 +18,14 @@ from typing_extensions import Annotated
 
 from pydantic import StrictFloat, StrictInt, StrictStr
 from typing import List, Optional, Union
-from algorithm_lib.models.algorithm_algorithm_data import AlgorithmAlgorithmData
-from algorithm_lib.models.algorithm_algorithm_infomation import AlgorithmAlgorithmInfomation
-from algorithm_lib.models.each_algorithm_data_update_request import EachAlgorithmDataUpdateRequest
-from algorithm_lib.models.each_algorithm_update_request import EachAlgorithmUpdateRequest
+from openapi_client.models.algorithm_algorithm_data import AlgorithmAlgorithmData
+from openapi_client.models.algorithm_algorithm_infomation import AlgorithmAlgorithmInfomation
+from openapi_client.models.each_algorithm_data_update_request import EachAlgorithmDataUpdateRequest
+from openapi_client.models.each_algorithm_update_request import EachAlgorithmUpdateRequest
 
-from algorithm_lib.api_client import ApiClient, RequestSerialized
-from algorithm_lib.api_response import ApiResponse
-from algorithm_lib.rest import RESTResponseType
+from openapi_client.api_client import ApiClient, RequestSerialized
+from openapi_client.api_response import ApiResponse
+from openapi_client.rest import RESTResponseType
 
 
 class AlgorithmApi:

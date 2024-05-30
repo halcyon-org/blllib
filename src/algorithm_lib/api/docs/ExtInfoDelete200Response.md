@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from algorithm_lib.models.ext_info_delete200_response import ExtInfoDelete200Response
+from openapi_client.models.ext_info_delete200_response import ExtInfoDelete200Response
 
 # TODO update the JSON string below
 json = "{}"
