@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.each_algorithm_update_request import EachAlgorithmUpdateRequest
+from algorithm_lib.models.each_algorithm_update_request import EachAlgorithmUpdateRequest
 
 class TestEachAlgorithmUpdateRequest(unittest.TestCase):
     """EachAlgorithmUpdateRequest unit test stubs"""
@@ -35,7 +35,7 @@ class TestEachAlgorithmUpdateRequest(unittest.TestCase):
         model = EachAlgorithmUpdateRequest()
         if include_optional:
             return EachAlgorithmUpdateRequest(
-                update_algorithm = openapi_client.models.algorithm/algorithm_infomation_create_or_update.Algorithm.AlgorithmInfomationCreateOrUpdate(
+                update_algorithm = algorithm_lib.models.algorithm/algorithm_infomation_create_or_update.Algorithm.AlgorithmInfomationCreateOrUpdate(
                     algorithm_id = null, 
                     algorithm_name = '', 
                     algorithm_description = '', 
@@ -51,7 +51,7 @@ class TestEachAlgorithmUpdateRequest(unittest.TestCase):
             )
         else:
             return EachAlgorithmUpdateRequest(
-                update_algorithm = openapi_client.models.algorithm/algorithm_infomation_create_or_update.Algorithm.AlgorithmInfomationCreateOrUpdate(
+                update_algorithm = algorithm_lib.models.algorithm/algorithm_infomation_create_or_update.Algorithm.AlgorithmInfomationCreateOrUpdate(
                     algorithm_id = null, 
                     algorithm_name = '', 
                     algorithm_description = '', 

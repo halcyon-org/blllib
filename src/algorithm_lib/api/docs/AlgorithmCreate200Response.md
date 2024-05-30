@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.algorithm_create200_response import AlgorithmCreate200Response
+from algorithm_lib.models.algorithm_create200_response import AlgorithmCreate200Response
 
 # TODO update the JSON string below
 json = "{}"

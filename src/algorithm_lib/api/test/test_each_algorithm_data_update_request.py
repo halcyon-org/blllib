@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.each_algorithm_data_update_request import EachAlgorithmDataUpdateRequest
+from algorithm_lib.models.each_algorithm_data_update_request import EachAlgorithmDataUpdateRequest
 
 class TestEachAlgorithmDataUpdateRequest(unittest.TestCase):
     """EachAlgorithmDataUpdateRequest unit test stubs"""
@@ -35,7 +35,7 @@ class TestEachAlgorithmDataUpdateRequest(unittest.TestCase):
         model = EachAlgorithmDataUpdateRequest()
         if include_optional:
             return EachAlgorithmDataUpdateRequest(
-                update_data = openapi_client.models.algorithm/algorithm_data_create_or_update.Algorithm.AlgorithmDataCreateOrUpdate(
+                update_data = algorithm_lib.models.algorithm/algorithm_data_create_or_update.Algorithm.AlgorithmDataCreateOrUpdate(
                     algorithm_id = '', 
                     algorithm_scale = 1.337, 
                     content_type = 'image', 
@@ -43,7 +43,7 @@ class TestEachAlgorithmDataUpdateRequest(unittest.TestCase):
             )
         else:
             return EachAlgorithmDataUpdateRequest(
-                update_data = openapi_client.models.algorithm/algorithm_data_create_or_update.Algorithm.AlgorithmDataCreateOrUpdate(
+                update_data = algorithm_lib.models.algorithm/algorithm_data_create_or_update.Algorithm.AlgorithmDataCreateOrUpdate(
                     algorithm_id = '', 
                     algorithm_scale = 1.337, 
                     content_type = 'image', 

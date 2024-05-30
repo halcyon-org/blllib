@@ -17,18 +17,21 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict
-from typing import Any, ClassVar, Dict, List
-from openapi_client.models.algorithm_algorithm_infomation_create import AlgorithmAlgorithmInfomationCreate
+from pydantic import BaseModel, ConfigDict, StrictBytes, StrictFloat, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Union
+from algorithm_lib.models.algorithm_data_type import AlgorithmDataType
 from typing import Optional, Set
 from typing_extensions import Self
 
-class AlgorithmCreateRequest(BaseModel):
+class AlgorithmAlgorithmDataCreateOrUpdate(BaseModel):
     """
-    AlgorithmCreateRequest
+    AlgorithmAlgorithmDataCreateOrUpdate
     """ # noqa: E501
-    algorithm: AlgorithmAlgorithmInfomationCreate
-    __properties: ClassVar[List[str]] = ["algorithm"]
+    algorithm_id: StrictStr
+    algorithm_scale: Union[StrictFloat, StrictInt]
+    content_type: AlgorithmDataType
+    content: Union[StrictBytes, StrictStr]
+    __properties: ClassVar[List[str]] = ["algorithm_id", "algorithm_scale", "content_type", "content"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -48,7 +51,7 @@ class AlgorithmCreateRequest(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of AlgorithmCreateRequest from a JSON string"""
+        """Create an instance of AlgorithmAlgorithmDataCreateOrUpdate from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -69,14 +72,11 @@ class AlgorithmCreateRequest(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of algorithm
-        if self.algorithm:
-            _dict['algorithm'] = self.algorithm.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of AlgorithmCreateRequest from a dict"""
+        """Create an instance of AlgorithmAlgorithmDataCreateOrUpdate from a dict"""
         if obj is None:
             return None
 
@@ -84,7 +84,10 @@ class AlgorithmCreateRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "algorithm": AlgorithmAlgorithmInfomationCreate.from_dict(obj["algorithm"]) if obj.get("algorithm") is not None else None
+            "algorithm_id": obj.get("algorithm_id"),
+            "algorithm_scale": obj.get("algorithm_scale"),
+            "content_type": obj.get("content_type"),
+            "content": obj.get("content")
         })
         return _obj
 

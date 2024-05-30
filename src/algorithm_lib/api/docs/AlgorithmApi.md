@@ -1,4 +1,4 @@
-# openapi_client.AlgorithmApi
+# algorithm_lib.AlgorithmApi
 
 All URIs are relative to *http://localhost*
 
@@ -21,14 +21,14 @@ Method | HTTP request | Description
 * Bearer Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.algorithm_algorithm_infomation import AlgorithmAlgorithmInfomation
-from openapi_client.rest import ApiException
+import algorithm_lib
+from algorithm_lib.models.algorithm_algorithm_infomation import AlgorithmAlgorithmInfomation
+from algorithm_lib.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = algorithm_lib.Configuration(
     host = "http://localhost"
 )
 
@@ -38,14 +38,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerAuth
-configuration = openapi_client.Configuration(
+configuration = algorithm_lib.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with algorithm_lib.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AlgorithmApi(api_client)
+    api_instance = algorithm_lib.AlgorithmApi(api_client)
     limit = 56 # int |  (optional)
 
     try:
@@ -96,14 +96,14 @@ Name | Type | Description  | Notes
 * Bearer Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.algorithm_algorithm_data import AlgorithmAlgorithmData
-from openapi_client.rest import ApiException
+import algorithm_lib
+from algorithm_lib.models.algorithm_algorithm_data import AlgorithmAlgorithmData
+from algorithm_lib.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = algorithm_lib.Configuration(
     host = "http://localhost"
 )
 
@@ -113,14 +113,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerAuth
-configuration = openapi_client.Configuration(
+configuration = algorithm_lib.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with algorithm_lib.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AlgorithmApi(api_client)
+    api_instance = algorithm_lib.AlgorithmApi(api_client)
     algorithm_id = 'algorithm_id_example' # str | 
     scale = 3.4 # float | 
 
@@ -173,15 +173,15 @@ Name | Type | Description  | Notes
 * Bearer Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.algorithm_algorithm_data import AlgorithmAlgorithmData
-from openapi_client.models.each_algorithm_data_update_request import EachAlgorithmDataUpdateRequest
-from openapi_client.rest import ApiException
+import algorithm_lib
+from algorithm_lib.models.algorithm_algorithm_data import AlgorithmAlgorithmData
+from algorithm_lib.models.each_algorithm_data_update_request import EachAlgorithmDataUpdateRequest
+from algorithm_lib.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = algorithm_lib.Configuration(
     host = "http://localhost"
 )
 
@@ -191,17 +191,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerAuth
-configuration = openapi_client.Configuration(
+configuration = algorithm_lib.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with algorithm_lib.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AlgorithmApi(api_client)
+    api_instance = algorithm_lib.AlgorithmApi(api_client)
     algorithm_id = 'algorithm_id_example' # str | 
     scale = 3.4 # float | 
-    each_algorithm_data_update_request = openapi_client.EachAlgorithmDataUpdateRequest() # EachAlgorithmDataUpdateRequest | 
+    each_algorithm_data_update_request = algorithm_lib.EachAlgorithmDataUpdateRequest() # EachAlgorithmDataUpdateRequest | 
 
     try:
         api_response = api_instance.each_algorithm_data_update(algorithm_id, scale, each_algorithm_data_update_request)
@@ -253,14 +253,14 @@ Name | Type | Description  | Notes
 * Bearer Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.algorithm_algorithm_infomation import AlgorithmAlgorithmInfomation
-from openapi_client.rest import ApiException
+import algorithm_lib
+from algorithm_lib.models.algorithm_algorithm_infomation import AlgorithmAlgorithmInfomation
+from algorithm_lib.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = algorithm_lib.Configuration(
     host = "http://localhost"
 )
 
@@ -270,14 +270,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerAuth
-configuration = openapi_client.Configuration(
+configuration = algorithm_lib.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with algorithm_lib.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AlgorithmApi(api_client)
+    api_instance = algorithm_lib.AlgorithmApi(api_client)
     algorithm_id = 'algorithm_id_example' # str | 
 
     try:
@@ -328,15 +328,15 @@ Name | Type | Description  | Notes
 * Bearer Authentication (BearerAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.algorithm_algorithm_infomation import AlgorithmAlgorithmInfomation
-from openapi_client.models.each_algorithm_update_request import EachAlgorithmUpdateRequest
-from openapi_client.rest import ApiException
+import algorithm_lib
+from algorithm_lib.models.algorithm_algorithm_infomation import AlgorithmAlgorithmInfomation
+from algorithm_lib.models.each_algorithm_update_request import EachAlgorithmUpdateRequest
+from algorithm_lib.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = algorithm_lib.Configuration(
     host = "http://localhost"
 )
 
@@ -346,16 +346,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerAuth
-configuration = openapi_client.Configuration(
+configuration = algorithm_lib.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with algorithm_lib.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AlgorithmApi(api_client)
+    api_instance = algorithm_lib.AlgorithmApi(api_client)
     algorithm_id = 'algorithm_id_example' # str | 
-    each_algorithm_update_request = openapi_client.EachAlgorithmUpdateRequest() # EachAlgorithmUpdateRequest | 
+    each_algorithm_update_request = algorithm_lib.EachAlgorithmUpdateRequest() # EachAlgorithmUpdateRequest | 
 
     try:
         api_response = api_instance.each_algorithm_update(algorithm_id, each_algorithm_update_request)

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.ext_info_create_request import ExtInfoCreateRequest
+from algorithm_lib.models.ext_info_create_request import ExtInfoCreateRequest
 
 class TestExtInfoCreateRequest(unittest.TestCase):
     """ExtInfoCreateRequest unit test stubs"""
@@ -35,7 +35,7 @@ class TestExtInfoCreateRequest(unittest.TestCase):
         model = ExtInfoCreateRequest()
         if include_optional:
             return ExtInfoCreateRequest(
-                extinfo = openapi_client.models.ext_info/external_infomation_create.ExtInfo.ExternalInfomationCreate(
+                extinfo = algorithm_lib.models.ext_info/external_infomation_create.ExtInfo.ExternalInfomationCreate(
                     external_name = '', 
                     external_description = '', 
                     first_entry_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
@@ -46,7 +46,7 @@ class TestExtInfoCreateRequest(unittest.TestCase):
             )
         else:
             return ExtInfoCreateRequest(
-                extinfo = openapi_client.models.ext_info/external_infomation_create.ExtInfo.ExternalInfomationCreate(
+                extinfo = algorithm_lib.models.ext_info/external_infomation_create.ExtInfo.ExternalInfomationCreate(
                     external_name = '', 
                     external_description = '', 
                     first_entry_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 

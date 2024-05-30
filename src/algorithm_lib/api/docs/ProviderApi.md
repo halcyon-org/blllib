@@ -1,4 +1,4 @@
-# openapi_client.ProviderApi
+# algorithm_lib.ProviderApi
 
 All URIs are relative to *http://localhost*
 
@@ -21,14 +21,14 @@ Get client of api key
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.provider_client_data import ProviderClientData
-from openapi_client.rest import ApiException
+import algorithm_lib
+from algorithm_lib.models.provider_client_data import ProviderClientData
+from algorithm_lib.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = algorithm_lib.Configuration(
     host = "http://localhost"
 )
 
@@ -44,9 +44,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with algorithm_lib.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProviderApi(api_client)
+    api_instance = algorithm_lib.ProviderApi(api_client)
 
     try:
         api_response = api_instance.clients_get_client()
@@ -93,14 +93,14 @@ This endpoint does not need any parameter.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.algorithm_algorithm_infomation import AlgorithmAlgorithmInfomation
-from openapi_client.rest import ApiException
+import algorithm_lib
+from algorithm_lib.models.algorithm_algorithm_infomation import AlgorithmAlgorithmInfomation
+from algorithm_lib.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = algorithm_lib.Configuration(
     host = "http://localhost"
 )
 
@@ -116,9 +116,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with algorithm_lib.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProviderApi(api_client)
+    api_instance = algorithm_lib.ProviderApi(api_client)
     limit = 56 # int |  (optional)
 
     try:
@@ -169,17 +169,17 @@ Name | Type | Description  | Notes
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.algorithm_algorithm_data import AlgorithmAlgorithmData
-from openapi_client.models.provider_request_type import ProviderRequestType
-from openapi_client.models.types_date_date_until import TypesDateDateUntil
-from openapi_client.models.types_geo_json_multi_polygon import TypesGeoJSONMultiPolygon
-from openapi_client.rest import ApiException
+import algorithm_lib
+from algorithm_lib.models.algorithm_algorithm_data import AlgorithmAlgorithmData
+from algorithm_lib.models.provider_request_type import ProviderRequestType
+from algorithm_lib.models.types_date_date_until import TypesDateDateUntil
+from algorithm_lib.models.types_geo_json_multi_polygon import TypesGeoJSONMultiPolygon
+from algorithm_lib.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = algorithm_lib.Configuration(
     host = "http://localhost"
 )
 
@@ -195,15 +195,15 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with algorithm_lib.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProviderApi(api_client)
+    api_instance = algorithm_lib.ProviderApi(api_client)
     altorithm_id = 'altorithm_id_example' # str | 
-    type = openapi_client.ProviderRequestType() # ProviderRequestType | 
+    type = algorithm_lib.ProviderRequestType() # ProviderRequestType | 
     algorithm_data_id = 'algorithm_data_id_example' # str |  (optional)
-    area = openapi_client.TypesGeoJSONMultiPolygon() # TypesGeoJSONMultiPolygon |  (optional)
-    until = openapi_client.TypesDateDateUntil() # TypesDateDateUntil |  (optional)
-    until_entry = openapi_client.TypesDateDateUntil() # TypesDateDateUntil |  (optional)
+    area = algorithm_lib.TypesGeoJSONMultiPolygon() # TypesGeoJSONMultiPolygon |  (optional)
+    until = algorithm_lib.TypesDateDateUntil() # TypesDateDateUntil |  (optional)
+    until_entry = algorithm_lib.TypesDateDateUntil() # TypesDateDateUntil |  (optional)
     scale = 3.4 # float |  (optional)
 
     try:

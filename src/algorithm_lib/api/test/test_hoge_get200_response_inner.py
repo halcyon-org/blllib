@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.hoge_get200_response_inner import HogeGet200ResponseInner
+from algorithm_lib.models.hoge_get200_response_inner import HogeGet200ResponseInner
 
 class TestHogeGet200ResponseInner(unittest.TestCase):
     """HogeGet200ResponseInner unit test stubs"""

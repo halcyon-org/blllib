@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.algorithm_data_type import AlgorithmDataType
+from algorithm_lib.models.algorithm_data_type import AlgorithmDataType
 
 class TestAlgorithmDataType(unittest.TestCase):
     """AlgorithmDataType unit test stubs"""

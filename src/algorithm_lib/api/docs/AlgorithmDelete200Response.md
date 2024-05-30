@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.algorithm_delete200_response import AlgorithmDelete200Response
+from algorithm_lib.models.algorithm_delete200_response import AlgorithmDelete200Response
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.ext_info_versions import ExtInfoVersions
+from algorithm_lib.models.ext_info_versions import ExtInfoVersions
 
 class TestExtInfoVersions(unittest.TestCase):
     """ExtInfoVersions unit test stubs"""

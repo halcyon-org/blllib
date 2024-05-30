@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.types_geo_json_multi_polygon import TypesGeoJSONMultiPolygon
+from algorithm_lib.models.types_geo_json_multi_polygon import TypesGeoJSONMultiPolygon
 
 class TestTypesGeoJSONMultiPolygon(unittest.TestCase):
     """TypesGeoJSONMultiPolygon unit test stubs"""

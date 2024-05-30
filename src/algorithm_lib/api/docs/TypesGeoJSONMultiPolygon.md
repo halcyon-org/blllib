@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.types_geo_json_multi_polygon import TypesGeoJSONMultiPolygon
+from algorithm_lib.models.types_geo_json_multi_polygon import TypesGeoJSONMultiPolygon
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.ext_info_create200_response import ExtInfoCreate200Response
+from algorithm_lib.models.ext_info_create200_response import ExtInfoCreate200Response
 
 class TestExtInfoCreate200Response(unittest.TestCase):
     """ExtInfoCreate200Response unit test stubs"""

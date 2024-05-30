@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.algorithm_algorithm_data import AlgorithmAlgorithmData
+from algorithm_lib.models.algorithm_algorithm_data import AlgorithmAlgorithmData
 
 # TODO update the JSON string below
 json = "{}"

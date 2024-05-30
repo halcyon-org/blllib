@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.algorithm_algorithm_data_create_or_update import AlgorithmAlgorithmDataCreateOrUpdate
+from algorithm_lib.models.algorithm_algorithm_data_create_or_update import AlgorithmAlgorithmDataCreateOrUpdate
 
 class TestAlgorithmAlgorithmDataCreateOrUpdate(unittest.TestCase):
     """AlgorithmAlgorithmDataCreateOrUpdate unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.provider_versions import ProviderVersions
+from algorithm_lib.models.provider_versions import ProviderVersions
 
 class TestProviderVersions(unittest.TestCase):
     """ProviderVersions unit test stubs"""

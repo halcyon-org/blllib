@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.ext_info_create200_response import ExtInfoCreate200Response
+from algorithm_lib.models.ext_info_create200_response import ExtInfoCreate200Response
 
 # TODO update the JSON string below
 json = "{}"

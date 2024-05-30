@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.hoge_get200_response_inner import HogeGet200ResponseInner
+from algorithm_lib.models.hoge_get200_response_inner import HogeGet200ResponseInner
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.client_create_request import ClientCreateRequest
+from algorithm_lib.models.client_create_request import ClientCreateRequest
 
 class TestClientCreateRequest(unittest.TestCase):
     """ClientCreateRequest unit test stubs"""
@@ -35,12 +35,12 @@ class TestClientCreateRequest(unittest.TestCase):
         model = ClientCreateRequest()
         if include_optional:
             return ClientCreateRequest(
-                client = openapi_client.models.provider/client_data_create.Provider.ClientDataCreate(
+                client = algorithm_lib.models.provider/client_data_create.Provider.ClientDataCreate(
                     name = '', )
             )
         else:
             return ClientCreateRequest(
-                client = openapi_client.models.provider/client_data_create.Provider.ClientDataCreate(
+                client = algorithm_lib.models.provider/client_data_create.Provider.ClientDataCreate(
                     name = '', ),
         )
         """

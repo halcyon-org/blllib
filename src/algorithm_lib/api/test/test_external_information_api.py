@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.external_information_api import ExternalInformationApi
+from algorithm_lib.api.external_information_api import ExternalInformationApi
 
 
 class TestExternalInformationApi(unittest.TestCase):

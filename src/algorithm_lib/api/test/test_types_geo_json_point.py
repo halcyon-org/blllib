@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.types_geo_json_point import TypesGeoJSONPoint
+from algorithm_lib.models.types_geo_json_point import TypesGeoJSONPoint
 
 class TestTypesGeoJSONPoint(unittest.TestCase):
     """TypesGeoJSONPoint unit test stubs"""

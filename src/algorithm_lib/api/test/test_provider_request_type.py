@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.provider_request_type import ProviderRequestType
+from algorithm_lib.models.provider_request_type import ProviderRequestType
 
 class TestProviderRequestType(unittest.TestCase):
     """ProviderRequestType unit test stubs"""

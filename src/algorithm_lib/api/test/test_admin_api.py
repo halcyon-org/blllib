@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.admin_api import AdminApi
+from algorithm_lib.api.admin_api import AdminApi
 
 
 class TestAdminApi(unittest.TestCase):

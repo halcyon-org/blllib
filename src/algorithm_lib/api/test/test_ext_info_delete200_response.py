@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.ext_info_delete200_response import ExtInfoDelete200Response
+from algorithm_lib.models.ext_info_delete200_response import ExtInfoDelete200Response
 
 class TestExtInfoDelete200Response(unittest.TestCase):
     """ExtInfoDelete200Response unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.provider_client_data_create import ProviderClientDataCreate
+from algorithm_lib.models.provider_client_data_create import ProviderClientDataCreate
 
 class TestProviderClientDataCreate(unittest.TestCase):
     """ProviderClientDataCreate unit test stubs"""

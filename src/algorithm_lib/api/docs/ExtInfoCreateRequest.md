@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.ext_info_create_request import ExtInfoCreateRequest
+from algorithm_lib.models.ext_info_create_request import ExtInfoCreateRequest
 
 # TODO update the JSON string below
 json = "{}"

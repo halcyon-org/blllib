@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.types_date_date_until import TypesDateDateUntil
+from algorithm_lib.models.types_date_date_until import TypesDateDateUntil
 
 # TODO update the JSON string below
 json = "{}"

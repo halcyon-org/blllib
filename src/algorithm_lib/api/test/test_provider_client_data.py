@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.provider_client_data import ProviderClientData
+from algorithm_lib.models.provider_client_data import ProviderClientData
 
 class TestProviderClientData(unittest.TestCase):
     """ProviderClientData unit test stubs"""

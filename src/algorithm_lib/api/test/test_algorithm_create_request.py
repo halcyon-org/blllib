@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.algorithm_create_request import AlgorithmCreateRequest
+from algorithm_lib.models.algorithm_create_request import AlgorithmCreateRequest
 
 class TestAlgorithmCreateRequest(unittest.TestCase):
     """AlgorithmCreateRequest unit test stubs"""
@@ -35,7 +35,7 @@ class TestAlgorithmCreateRequest(unittest.TestCase):
         model = AlgorithmCreateRequest()
         if include_optional:
             return AlgorithmCreateRequest(
-                algorithm = openapi_client.models.algorithm/algorithm_infomation_create.Algorithm.AlgorithmInfomationCreate(
+                algorithm = algorithm_lib.models.algorithm/algorithm_infomation_create.Algorithm.AlgorithmInfomationCreate(
                     algorithm_name = '', 
                     algorithm_description = '', 
                     need_external = [
@@ -50,7 +50,7 @@ class TestAlgorithmCreateRequest(unittest.TestCase):
             )
         else:
             return AlgorithmCreateRequest(
-                algorithm = openapi_client.models.algorithm/algorithm_infomation_create.Algorithm.AlgorithmInfomationCreate(
+                algorithm = algorithm_lib.models.algorithm/algorithm_infomation_create.Algorithm.AlgorithmInfomationCreate(
                     algorithm_name = '', 
                     algorithm_description = '', 
                     need_external = [

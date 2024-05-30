@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.versions import Versions
+from algorithm_lib.models.versions import Versions
 
 class TestVersions(unittest.TestCase):
     """Versions unit test stubs"""

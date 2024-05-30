@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.algorithm_api import AlgorithmApi
+from algorithm_lib.api.algorithm_api import AlgorithmApi
 
 
 class TestAlgorithmApi(unittest.TestCase):

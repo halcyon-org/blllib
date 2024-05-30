@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.provider_api import ProviderApi
+from algorithm_lib.api.provider_api import ProviderApi
 
 
 class TestProviderApi(unittest.TestCase):

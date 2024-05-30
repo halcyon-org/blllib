@@ -17,20 +17,20 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import StrictStr
-from openapi_client.models.algorithm_create200_response import AlgorithmCreate200Response
-from openapi_client.models.algorithm_create_request import AlgorithmCreateRequest
-from openapi_client.models.algorithm_delete200_response import AlgorithmDelete200Response
-from openapi_client.models.client_create_request import ClientCreateRequest
-from openapi_client.models.client_delete200_response import ClientDelete200Response
-from openapi_client.models.ext_info_create200_response import ExtInfoCreate200Response
-from openapi_client.models.ext_info_create_request import ExtInfoCreateRequest
-from openapi_client.models.ext_info_delete200_response import ExtInfoDelete200Response
-from openapi_client.models.ext_info_ext_info_id import ExtInfoExtInfoId
-from openapi_client.models.provider_client_data import ProviderClientData
+from algorithm_lib.models.algorithm_create200_response import AlgorithmCreate200Response
+from algorithm_lib.models.algorithm_create_request import AlgorithmCreateRequest
+from algorithm_lib.models.algorithm_delete200_response import AlgorithmDelete200Response
+from algorithm_lib.models.client_create_request import ClientCreateRequest
+from algorithm_lib.models.client_delete200_response import ClientDelete200Response
+from algorithm_lib.models.ext_info_create200_response import ExtInfoCreate200Response
+from algorithm_lib.models.ext_info_create_request import ExtInfoCreateRequest
+from algorithm_lib.models.ext_info_delete200_response import ExtInfoDelete200Response
+from algorithm_lib.models.ext_info_ext_info_id import ExtInfoExtInfoId
+from algorithm_lib.models.provider_client_data import ProviderClientData
 
-from openapi_client.api_client import ApiClient, RequestSerialized
-from openapi_client.api_response import ApiResponse
-from openapi_client.rest import RESTResponseType
+from algorithm_lib.api_client import ApiClient, RequestSerialized
+from algorithm_lib.api_response import ApiResponse
+from algorithm_lib.rest import RESTResponseType
 
 
 class AdminApi:

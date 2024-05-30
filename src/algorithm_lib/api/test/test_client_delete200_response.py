@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.client_delete200_response import ClientDelete200Response
+from algorithm_lib.models.client_delete200_response import ClientDelete200Response
 
 class TestClientDelete200Response(unittest.TestCase):
     """ClientDelete200Response unit test stubs"""

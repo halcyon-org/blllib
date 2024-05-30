@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.ext_info_ext_info_id import ExtInfoExtInfoId
+from algorithm_lib.models.ext_info_ext_info_id import ExtInfoExtInfoId
 
 class TestExtInfoExtInfoId(unittest.TestCase):
     """ExtInfoExtInfoId unit test stubs"""

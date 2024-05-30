@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.ext_info_external_infomation import ExtInfoExternalInfomation
+from algorithm_lib.models.ext_info_external_infomation import ExtInfoExternalInfomation
 
 class TestExtInfoExternalInfomation(unittest.TestCase):
     """ExtInfoExternalInfomation unit test stubs"""
