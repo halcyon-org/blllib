@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 ### Example
 
-* Bearer Authentication (BearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import algorithm_lib
@@ -39,10 +39,11 @@ configuration = algorithm_lib.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization: BearerAuth
-configuration = algorithm_lib.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with algorithm_lib.ApiClient(configuration) as api_client:
@@ -73,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -95,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Example
 
-* Bearer Authentication (BearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import algorithm_lib
@@ -114,10 +115,11 @@ configuration = algorithm_lib.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization: BearerAuth
-configuration = algorithm_lib.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with algorithm_lib.ApiClient(configuration) as api_client:
@@ -148,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -170,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Example
 
-* Bearer Authentication (BearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import algorithm_lib
@@ -190,10 +192,11 @@ configuration = algorithm_lib.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization: BearerAuth
-configuration = algorithm_lib.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with algorithm_lib.ApiClient(configuration) as api_client:
@@ -224,7 +227,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -246,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Example
 
-* Bearer Authentication (BearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import algorithm_lib
@@ -265,10 +268,11 @@ configuration = algorithm_lib.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization: BearerAuth
-configuration = algorithm_lib.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with algorithm_lib.ApiClient(configuration) as api_client:
@@ -299,7 +303,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -321,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Example
 
-* Bearer Authentication (BearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import algorithm_lib
@@ -341,10 +345,11 @@ configuration = algorithm_lib.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization: BearerAuth
-configuration = algorithm_lib.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with algorithm_lib.ApiClient(configuration) as api_client:
@@ -375,7 +380,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -397,7 +402,7 @@ Name | Type | Description  | Notes
 
 ### Example
 
-* Bearer Authentication (BearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import algorithm_lib
@@ -417,10 +422,11 @@ configuration = algorithm_lib.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization: BearerAuth
-configuration = algorithm_lib.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with algorithm_lib.ApiClient(configuration) as api_client:
@@ -451,7 +457,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
