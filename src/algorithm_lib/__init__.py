@@ -1,4 +1,4 @@
-from api.openapi_client import *
+from api.algorithm_lib import *
 import os, glob
 
 __all__ = [
