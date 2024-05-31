@@ -1,5 +1,13 @@
 set export
 
+VENV_PATH :=  if os() == 'windows' {
+  'env/Scripts'
+} else {
+  'env/bin'
+}
+
+PIP_PATH := "$VENV_PATH/pip3"
+
 default:
   @just --list
 
@@ -7,15 +15,14 @@ setup: setup-py setup-pnpm
 
 setup-py:
   python3 -m venv env
-  env/bin/pip3 install .
+  {{PIP_PATH}} install .
 
 setup-pnpm:
   pnpm i --frozen-lockfile
 
-setup-dev:
-  python3 -m venv env
-  env/bin/pip3 install algorithm-lib[dev]
-  env/bin/pip3 install -e .
+setup-dev: setup-py
+  {{PIP_PATH}} install algorithm-lib[dev]
+  {{PIP_PATH}} install -e .
 
 gen: setup-pnpm
   pnpm run gen
@@ -23,11 +30,11 @@ gen: setup-pnpm
 check: lint test type
 
 lint: setup-dev
-  env/bin/black src
-  env/bin/isort src
+  "{{VENV_PATH}}/black" src
+  "{{VENV_PATH}}/isort" src
 
 test: setup-dev
-  env/bin/pytest
+  "{{VENV_PATH}}/pytest"
 
 type: setup-dev
-  env/bin/mypy
+  "{{VENV_PATH}}/mypy"
