@@ -27,7 +27,7 @@ setup-dev:
   {{PIP_PATH}} install poetry
   {{POETRY_PATH}} install
 
-gen: setup-pnpm
+gen: clean setup-pnpm
   pnpm run gen
   just change-openapi_client
   
@@ -52,3 +52,6 @@ mock:
 
 mock-stop:
   docker stop $(docker ps -q --filter ancestor=stoplight/prism:4)
+
+clean:
+  git clean -dfX
