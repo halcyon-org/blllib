@@ -31,7 +31,7 @@ gen: clean setup-pnpm && change-openapi_client
   pnpm run gen
   
 change-openapi_client:
-  sed -i '' 's/python = "^3.7"/python = ">=3.11"/g' openapi_client/pyproject.toml
+  python3 scripts/sed.py openapi_client/pyproject.toml 'python = "^3.7"' 'python = ">=3.11"'
 
 check: lint type test
 

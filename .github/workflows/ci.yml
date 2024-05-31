@@ -76,8 +76,6 @@ jobs:
         with:
           node-version: 18
           cache: "pnpm"
-      - name: Install package
-        run: just setup-pnpm
       - name: just gen
         run: |
           just gen
