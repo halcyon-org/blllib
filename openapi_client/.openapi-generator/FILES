@@ -28,12 +28,12 @@ docs/ExtInfoExternalInfomationCreate.md
 docs/ExtInfoVersions.md
 docs/ExternalInformationApi.md
 docs/HogeGet200ResponseInner.md
-docs/MainApi.md
 docs/ProviderApi.md
 docs/ProviderClientData.md
 docs/ProviderClientDataCreate.md
 docs/ProviderRequestType.md
 docs/ProviderVersions.md
+docs/ServerApi.md
 docs/ServerVersions.md
 docs/TypesDateDateUntil.md
 docs/TypesGeoJSONMultiPoint.md
@@ -47,8 +47,8 @@ openapi_client/api/__init__.py
 openapi_client/api/admin_api.py
 openapi_client/api/algorithm_api.py
 openapi_client/api/external_information_api.py
-openapi_client/api/main_api.py
 openapi_client/api/provider_api.py
+openapi_client/api/server_api.py
 openapi_client/api_client.py
 openapi_client/api_response.py
 openapi_client/configuration.py
@@ -95,5 +95,5 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_server_versions.py
+test/test_server_api.py
 tox.ini
