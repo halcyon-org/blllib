@@ -30,20 +30,20 @@ setup-dev:
 gen: clean setup-pnpm && change-openapi_client
   pnpm run gen
   
-check: lint test type
+change-openapi_client:
+  sed -i '' 's/python = "^3.7"/python = ">=3.11"/g' openapi_client/pyproject.toml
+
+check: lint type test
 
 lint: setup-dev
   "{{VENV_PATH}}/black" src
   "{{VENV_PATH}}/isort" src
 
+type: setup-dev
+  "{{VENV_PATH}}/mypy" src
+
 test: setup-dev mock && mock-stop
   "{{VENV_PATH}}/pytest"
-
-type: setup-dev
-  "{{VENV_PATH}}/mypy"
-
-change-openapi_client:
-  sed -i '' 's/python = "^3.7"/python = ">=3.11"/g' openapi_client/pyproject.toml
 
 mock:
   docker run --rm -d -p 4010:4010 --name=belifeline-mock -v $PWD/belifeline-schema/schema/@typespec/openapi3/:/tmp stoplight/prism:4 mock -h 0.0.0.0 /tmp/openapi.yaml
