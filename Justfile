@@ -47,7 +47,7 @@ test: setup-dev mock && mock-stop
 
 mock:
   docker run --rm -d -p 4010:4010 --name=belifeline-mock -v $PWD/belifeline-schema/schema/@typespec/openapi3/:/tmp stoplight/prism:4 mock -h 0.0.0.0 /tmp/openapi.yaml
-  until curl localhost:4010 > /dev/null 2>&1; do echo "mysql is unavailable - waiting" && sleep 2 ; done
+  until curl localhost:4010 > /dev/null 2>&1; do echo "mock-server is unavailable - waiting" && sleep 2 ; done
 
 mock-stop:
   docker stop belifeline-mock
