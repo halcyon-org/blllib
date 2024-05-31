@@ -18,9 +18,9 @@ from enum import Enum
 from typing_extensions import Self
 
 
-class AlgorithmVersions(str, Enum):
+class ServerVersions(str, Enum):
     """
-    AlgorithmVersions
+    ServerVersions
     """
 
     """
@@ -30,7 +30,7 @@ class AlgorithmVersions(str, Enum):
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
-        """Create an instance of AlgorithmVersions from a JSON string"""
+        """Create an instance of ServerVersions from a JSON string"""
         return cls(json.loads(json_str))
 
 

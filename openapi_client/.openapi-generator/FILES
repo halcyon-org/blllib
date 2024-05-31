@@ -34,8 +34,7 @@ docs/ProviderClientData.md
 docs/ProviderClientDataCreate.md
 docs/ProviderRequestType.md
 docs/ProviderVersions.md
-docs/StatusCode.md
-docs/StatusData.md
+docs/ServerVersions.md
 docs/TypesDateDateUntil.md
 docs/TypesGeoJSONMultiPoint.md
 docs/TypesGeoJSONMultiPolygon.md
@@ -81,8 +80,7 @@ openapi_client/models/provider_client_data.py
 openapi_client/models/provider_client_data_create.py
 openapi_client/models/provider_request_type.py
 openapi_client/models/provider_versions.py
-openapi_client/models/status_code.py
-openapi_client/models/status_data.py
+openapi_client/models/server_versions.py
 openapi_client/models/types_date_date_until.py
 openapi_client/models/types_geo_json_multi_point.py
 openapi_client/models/types_geo_json_multi_polygon.py
@@ -97,4 +95,5 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_server_versions.py
 tox.ini
