@@ -1,5 +1,7 @@
+import glob
+import os
+
 from openapi_client import *
-import os, glob
 
 __all__ = [
     os.path.split(os.path.splitext(file)[0])[1]
