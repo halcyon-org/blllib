@@ -28,11 +28,14 @@ docs/ExtInfoExternalInfomationCreate.md
 docs/ExtInfoVersions.md
 docs/ExternalInformationApi.md
 docs/HogeGet200ResponseInner.md
+docs/MainApi.md
 docs/ProviderApi.md
 docs/ProviderClientData.md
 docs/ProviderClientDataCreate.md
 docs/ProviderRequestType.md
 docs/ProviderVersions.md
+docs/StatusCode.md
+docs/StatusData.md
 docs/TypesDateDateUntil.md
 docs/TypesGeoJSONMultiPoint.md
 docs/TypesGeoJSONMultiPolygon.md
@@ -45,6 +48,7 @@ openapi_client/api/__init__.py
 openapi_client/api/admin_api.py
 openapi_client/api/algorithm_api.py
 openapi_client/api/external_information_api.py
+openapi_client/api/main_api.py
 openapi_client/api/provider_api.py
 openapi_client/api_client.py
 openapi_client/api_response.py
@@ -77,6 +81,8 @@ openapi_client/models/provider_client_data.py
 openapi_client/models/provider_client_data_create.py
 openapi_client/models/provider_request_type.py
 openapi_client/models/provider_versions.py
+openapi_client/models/status_code.py
+openapi_client/models/status_data.py
 openapi_client/models/types_date_date_until.py
 openapi_client/models/types_geo_json_multi_point.py
 openapi_client/models/types_geo_json_multi_polygon.py

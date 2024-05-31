@@ -18,19 +18,20 @@ from enum import Enum
 from typing_extensions import Self
 
 
-class ExtInfoExtInfoId(str, Enum):
+class StatusCode(int, Enum):
     """
-    ExtInfoExtInfoId
+    StatusCode
     """
 
     """
     allowed enum values
     """
-    HOGE_ID = 'HOGE_ID'
+    NUMBER_200 = 200
+    NUMBER_500 = 500
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
-        """Create an instance of ExtInfoExtInfoId from a JSON string"""
+        """Create an instance of StatusCode from a JSON string"""
         return cls(json.loads(json_str))
 
 

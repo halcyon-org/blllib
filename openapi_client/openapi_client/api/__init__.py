@@ -4,5 +4,6 @@
 from openapi_client.api.admin_api import AdminApi
 from openapi_client.api.algorithm_api import AlgorithmApi
 from openapi_client.api.external_information_api import ExternalInformationApi
+from openapi_client.api.main_api import MainApi
 from openapi_client.api.provider_api import ProviderApi
 

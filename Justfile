@@ -29,6 +29,7 @@ setup-dev:
 
 gen: setup-pnpm
   pnpm run gen
+  just change-openapi_client
   
 check: lint test type
 
