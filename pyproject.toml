@@ -3,12 +3,12 @@ requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
 
 [tool.poetry]
-name = "algorithm_lib"
+name = "blllib"
 version = "0.1.0"
 description = "The supporter who supports everyone(algorithm)."
 readme = "README.md"
 authors = ["shiron-dev"]
-urls = { repository = "https://github.com/halcyon-org/algorithm-lib" }
+urls = { repository = "https://github.com/halcyon-org/blllib" }
 
 [tool.poetry.dependencies]
 python = ">=3.11"
