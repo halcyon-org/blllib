@@ -6,6 +6,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+      - uses: extractions/setup-just@v2
       - name: Set up Python 3.11
         uses: actions/setup-python@v4
         with:
@@ -26,7 +27,9 @@ jobs:
           poetry run mypy src
       - name: test with pytest
         run: |
+          just mock
           poetry run pytest
+          just mock-stop
       - name: Check diff
         run: |
           if [[ `git status --porcelain` ]]; then
@@ -60,6 +63,8 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - uses: extractions/setup-just@v2
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.0.0
