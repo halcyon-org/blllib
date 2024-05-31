@@ -1,43 +1,33 @@
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
-
-[project]
+[tool.poetry]
 name = "algorithm_lib"
 version = "0.1.0"
 description = "The supporter who supports everyone(algorithm)."
 readme = "README.md"
-license = {file = "LICENSE"}
-requires-python = ">=3.11"
-authors = [{ name = "shiron-dev" }]
-urls = {repository = "https://github.com/halcyon-org/algorithm-lib"}
-dependencies = [
-]
+license = "file:LICENSE"
+authors = ["shiron-dev <email@example.com>"]
+repository = "https://github.com/halcyon-org/algorithm-lib"
 
-[project.optional-dependencies]
+[tool.poetry.dependencies]
+python = ">=3.11"
+openapi_client = { path = "./openapi_client" }
+
+[tool.poetry.extras]
 test = ["pytest"]
-dev = [
-    "black",
-    "isort",
-    "pytest",
-    "mypy"
-]
+dev = ["black", "isort", "pytest", "mypy"]
 
-[tool.setuptools.packages.find]
-where = ["src"]
-exclude = ["tests"]
-namespaces = false
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
-[tools.black]
+[tool.black]
 line-length = 120
 
 [tool.isort]
 profile = "black"
 
 [tool.pytest.ini_options]
-pythonpath = [
-  "src"
-]
+pythonpath = ["src"]
+testpaths = ["src/test"]
 
 [tool.mypy]
 python_version = "3.11"
