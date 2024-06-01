@@ -1,0 +1,43 @@
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "blllib"
+version = "0.1.0"
+description = "The supporter who supports everyone(algorithm)."
+readme = "README.md"
+authors = ["shiron-dev"]
+urls = { repository = "https://github.com/halcyon-org/blllib" }
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+openapi_client = { path = "./openapi_client" }
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+black = "*"
+isort = "*"
+mypy = "*"
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["tests"]
+namespaces = false
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["src/test"]
+
+[tool.mypy]
+python_version = "3.11"
+no_strict_optional = true
+ignore_missing_imports = true
+check_untyped_defs = true
