@@ -1,0 +1,61 @@
+name: Update Schema
+
+on:
+  repository_dispatch:
+    types:
+      - update
+
+jobs:
+  update_submodule:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Update submodule
+        run: git submodule update --remote
+      - name: Check git status
+        id: status
+        run: echo "status=$(git status -s)" >> $GITHUB_OUTPUT
+      - uses: extractions/setup-just@v2
+        if: ${{ steps.status.outputs.status }}
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.0.0
+        with:
+          version: latest
+          run_install: false
+        if: ${{ steps.status.outputs.status }}
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "pnpm"
+        if: ${{ steps.status.outputs.status }}
+      - name: just gen
+        run: |
+          just gen
+        if: ${{ steps.status.outputs.status }}
+      - name: Commit
+        run: |
+          git config --local user.name "Github Actions"
+          git config --local user.email "action@github.com"
+          git add .
+          git status
+          git commit -m "chore: update schema"
+        if: ${{ steps.status.outputs.status }}
+      - uses: mikefarah/yq@v4.44.1
+        id: schema_ver
+        with:
+          cmd: yq eval '.info.version' belifeline-schema/schema/@typespec/openapi3/openapi.yaml
+        if: ${{ steps.status.outputs.status }}
+      - name: release as
+        run: |
+          git config --local user.name "Github Actions"
+          git config --local user.email "action@github.com"
+          git commit --allow-empty -m "chore: release ${{ steps.schema_ver.outputs.result }}" -m "Release-As: ${{ steps.schema_ver.outputs.result }}"
+        if: ${{ steps.status.outputs.status }}
+      - name: Push
+        run: |
+          git push origin HEAD
+        if: ${{ steps.status.outputs.status }}
