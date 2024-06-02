@@ -76,9 +76,11 @@ jobs:
         if: ${{ steps.status.outputs.status }}
       - name: Approve PR
         run: |
+          export GH_TOKEN="$(./.github/actions/script.sh)"
           gh pr review ${{ steps.create_pr.outputs.url }} --approve
         env:
-          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          APP_ID: ${{ secrets.APP_ID }}
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         if: ${{ steps.status.outputs.status }}
       - name: Enable auto-merge
         run: |
