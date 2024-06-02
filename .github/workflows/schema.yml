@@ -38,6 +38,7 @@ jobs:
         run: |
           git config --local user.name "Github Actions"
           git config --local user.email "action@github.com"
+          git checkout -b update-schema
           git add .
           git status
           git commit -m "chore: update schema"
@@ -51,9 +52,11 @@ jobs:
         run: |
           git config --local user.name "Github Actions"
           git config --local user.email "action@github.com"
+          git checkout update-schema
           git commit --allow-empty -m "chore: release ${{ steps.schema_ver.outputs.result }}" -m "Release-As: ${{ steps.schema_ver.outputs.result }}"
         if: ${{ steps.status.outputs.status }}
       - name: Push
         run: |
+          git checkout update-schema
           git push origin HEAD
         if: ${{ steps.status.outputs.status }}
