@@ -75,7 +75,7 @@ jobs:
         run: |
           echo 'url=$(gh pr create --title "feat: update schema" --body "${{ steps.schema_ver.outputs.result }}" --base main --head update-schema)' >> $GITHUB_OUTPUT
         env:
-          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GH_TOKEN: ${{secrets.ORG_TOKEN}}
         if: ${{ steps.status.outputs.status }}
   approve:
     runs-on: ubuntu-latest
