@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  update_submodule:
+  update_schema:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -41,7 +41,7 @@ jobs:
           git checkout -b update-schema
           git add .
           git status
-          git commit -m "chore: update schema"
+          git commit -m "feat: update schema"
         if: ${{ steps.status.outputs.status }}
       - uses: mikefarah/yq@v4.44.1
         id: schema_ver
@@ -60,3 +60,13 @@ jobs:
           git checkout update-schema
           git push origin HEAD
         if: ${{ steps.status.outputs.status }}
+      - name: Create PR
+        id: create_pr
+        run: |
+          echo 'url=$(gh pr create --title "feat: update schema" --body "${{ steps.schema_ver.outputs.result }}" --base main --head update-schema)' >> $GITHUB_OUTPUT
+      - name: Approve PR
+        run: |
+          gh pr review ${{ steps.create_pr.outputs.url }} --approve
+      - name: Enable auto-merge
+        run: |
+          gh pr merge ${{ steps.create_pr.outputs.url }} --merge --auto
