@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **first_entry_at** | **datetime** |  | 
 **last_entry_at** | **datetime** |  | 
 **last_updated_at** | **datetime** |  | 
-**bearer_token** | **str** |  | 
+**api_key** | **str** |  | 
 
 ## Example
 
