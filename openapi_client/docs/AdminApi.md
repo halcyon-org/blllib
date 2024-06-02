@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ext_info_create**
-> ExtInfoCreate200Response ext_info_create(ext_info_create_request)
+> ExtInfoExternalInfomation ext_info_create(ext_info_create_request)
 
 
 
@@ -329,8 +329,8 @@ Name | Type | Description  | Notes
 
 ```python
 import openapi_client
-from openapi_client.models.ext_info_create200_response import ExtInfoCreate200Response
 from openapi_client.models.ext_info_create_request import ExtInfoCreateRequest
+from openapi_client.models.ext_info_external_infomation import ExtInfoExternalInfomation
 from openapi_client.rest import ApiException
 from pprint import pprint
 
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ExtInfoCreate200Response**](ExtInfoCreate200Response.md)
+[**ExtInfoExternalInfomation**](ExtInfoExternalInfomation.md)
 
 ### Authorization
 
