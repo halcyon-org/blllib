@@ -3,6 +3,9 @@ name: Update Schema
 on:
   workflow_dispatch:
 
+permissions:
+  pull-requests: write
+
 jobs:
   update_schema:
     runs-on: ubuntu-latest
