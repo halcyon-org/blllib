@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: write
+  checks: write
+  contents: write
   pull-requests: write
 
 jobs:
@@ -61,7 +64,9 @@ jobs:
       - name: Push
         run: |
           git checkout update-schema
-          git push origin HEAD
+          git push origin HEAD:${GITHUB_REF}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: ${{ steps.status.outputs.status }}
       - name: Create PR
         id: create_pr
@@ -69,13 +74,16 @@ jobs:
           echo 'url=$(gh pr create --title "feat: update schema" --body "${{ steps.schema_ver.outputs.result }}" --base main --head update-schema)' >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        if: ${{ steps.status.outputs.status }}
       - name: Approve PR
         run: |
           gh pr review ${{ steps.create_pr.outputs.url }} --approve
         env:
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        if: ${{ steps.status.outputs.status }}
       - name: Enable auto-merge
         run: |
           gh pr merge ${{ steps.create_pr.outputs.url }} --merge --auto
         env:
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        if: ${{ steps.status.outputs.status }}
