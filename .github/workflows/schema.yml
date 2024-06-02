@@ -74,13 +74,16 @@ jobs:
         env:
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
         if: ${{ steps.status.outputs.status }}
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.PRIVATE_KEY }}
       - name: Approve PR
         run: |
-          export GH_TOKEN="$(./.github/actions/script.sh)"
           gh pr review ${{ steps.create_pr.outputs.url }} --approve
         env:
-          APP_ID: ${{ secrets.APP_ID }}
-          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
         if: ${{ steps.status.outputs.status }}
       - name: Enable auto-merge
         run: |
