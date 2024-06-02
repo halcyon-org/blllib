@@ -1,9 +1,7 @@
 name: Update Schema
 
 on:
-  repository_dispatch:
-    types:
-      - update
+  workflow_dispatch:
 
 jobs:
   update_submodule:
