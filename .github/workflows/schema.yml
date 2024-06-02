@@ -63,8 +63,7 @@ jobs:
         if: ${{ steps.status.outputs.status }}
       - name: Push
         run: |
-          git checkout update-schema
-          git push origin HEAD:${GITHUB_REF}
+          git push origin update-schema
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: ${{ steps.status.outputs.status }}
