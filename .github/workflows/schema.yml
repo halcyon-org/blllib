@@ -67,9 +67,15 @@ jobs:
         id: create_pr
         run: |
           echo 'url=$(gh pr create --title "feat: update schema" --body "${{ steps.schema_ver.outputs.result }}" --base main --head update-schema)' >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: Approve PR
         run: |
           gh pr review ${{ steps.create_pr.outputs.url }} --approve
+        env:
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: Enable auto-merge
         run: |
           gh pr merge ${{ steps.create_pr.outputs.url }} --merge --auto
+        env:
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
