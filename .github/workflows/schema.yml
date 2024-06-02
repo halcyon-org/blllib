@@ -79,15 +79,3 @@ jobs:
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.PRIVATE_KEY }}
-      - name: Approve PR
-        run: |
-          gh pr review ${{ steps.create_pr.outputs.url }} --approve
-        env:
-          GH_TOKEN: ${{ steps.app-token.outputs.token }}
-        if: ${{ steps.status.outputs.status }}
-      - name: Enable auto-merge
-        run: |
-          gh pr merge ${{ steps.create_pr.outputs.url }} --merge --auto
-        env:
-          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        if: ${{ steps.status.outputs.status }}
