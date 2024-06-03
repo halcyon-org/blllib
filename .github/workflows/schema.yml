@@ -16,9 +16,12 @@ jobs:
     outputs:
       pr_url: ${{ steps.create_pr.outputs.url }}
       status: ${{ steps.status.outputs.status }}
+      version: ${{ steps.schema_ver.outputs.result }}
+      cehck_patch: ${{ steps.check_patch.outputs.result }}
     steps:
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 2
           submodules: recursive
       - name: Update submodule
         run: git submodule update --remote
@@ -52,36 +55,44 @@ jobs:
           git status
           git commit -m "feat: update schema"
         if: ${{ steps.status.outputs.status }}
-      - uses: mikefarah/yq@v4.44.1
-        id: schema_ver
-        with:
-          cmd: yq eval '.info.version' belifeline-schema/schema/@typespec/openapi3/openapi.yaml
-        if: ${{ steps.status.outputs.status }}
-      - name: release as
-        run: |
-          git config --local user.name "Github Actions"
-          git config --local user.email "action@github.com"
-          git checkout update-schema
-          git commit --allow-empty -m "chore: release ${{ steps.schema_ver.outputs.result }}" -m "Release-As: ${{ steps.schema_ver.outputs.result }}"
-        if: ${{ steps.status.outputs.status }}
       - name: Push
         run: |
           git push origin update-schema
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: ${{ steps.status.outputs.status }}
+      - uses: mikefarah/yq@v4.44.1
+        id: schema_ver
+        with:
+          cmd: yq eval '.info.version' belifeline-schema/schema/@typespec/openapi3/openapi.yaml
+        if: ${{ steps.status.outputs.status }}
       - name: Create PR
         id: create_pr
         run: |
-          echo "url=$(gh pr create --title 'feat: update schema' --body '${{ steps.schema_ver.outputs.result }}' --base main --head update-schema)" >> $GITHUB_OUTPUT
+          echo "url=$(gh pr create --title 'feat: update schema ${{ steps.schema_ver.outputs.result }}' --body '${{ steps.schema_ver.outputs.result }}' --base main --head update-schema)" >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        if: ${{ steps.status.outputs.status }}
+      - run: git checkout HEAD^
+      - uses: mikefarah/yq@v4.44.1
+        id: before_ver
+        with:
+          cmd: yq eval '.info.version' belifeline-schema/schema/@typespec/openapi3/openapi.yaml
+        if: ${{ steps.status.outputs.status }}
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+        if: ${{ steps.status.outputs.status }}
+      - name: check patch
+        run: |
+          git checkout update-schema
+          echo "result=$(python3 ./scripts/check-patch ${{ steps.before_ver.outputs.result }} ${{ steps.schema_ver.outputs.result }})" >> $GITHUB_OUTPUT
         if: ${{ steps.status.outputs.status }}
   approve:
     runs-on: ubuntu-latest
     needs: update_schema
     timeout-minutes: 10
-    if: ${{ needs.update_schema.outputs.status }}
+    if: ${{ needs.update_schema.outputs.status }} && ${{ needs.update_schema.outputs.cehck_patch }} == "true"
     outputs:
       pr_url: ${{ needs.update_schema.outputs.pr_url }}
       status: ${{ needs.update_schema.outputs.status }}
