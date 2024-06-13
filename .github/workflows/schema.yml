@@ -31,7 +31,7 @@ jobs:
       - uses: extractions/setup-just@v2
         if: ${{ steps.status.outputs.status }}
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4.0.0
+        uses: pnpm/action-setup@v4
         with:
           run_install: false
         if: ${{ steps.status.outputs.status }}
