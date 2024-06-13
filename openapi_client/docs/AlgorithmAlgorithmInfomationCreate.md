@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **need_external** | [**List[ExtInfoExtInfoId]**](ExtInfoExtInfoId.md) |  | 
 **algorithm_scales** | **List[float]** |  | 
 **algorithm_data_ids** | **List[str]** |  | 
+**version** | **str** | Semantic versioning | 
 
 ## Example
 
