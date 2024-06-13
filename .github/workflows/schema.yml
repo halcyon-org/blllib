@@ -48,8 +48,8 @@ jobs:
         if: ${{ steps.status.outputs.status }}
       - name: Commit
         run: |
-          git config --local user.name "Github Actions"
-          git config --local user.email "action@github.com"
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b update-schema
           git add .
           git status
@@ -115,6 +115,6 @@ jobs:
     steps:
       - name: Enable auto-merge
         run: |
-          gh pr merge ${{ needs.approve.outputs.pr_url }} --merge --auto
+          gh pr merge ${{ needs.approve.outputs.pr_url }} --merge --auto --delete-branch
         env:
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
