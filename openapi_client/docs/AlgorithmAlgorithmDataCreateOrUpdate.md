@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **algorithm_id** | **str** |  | 
+**version** | **str** | Semantic versioning | 
 **algorithm_scale** | **float** |  | 
 **content_type** | [**AlgorithmDataType**](AlgorithmDataType.md) |  | 
 **content** | **bytearray** |  | 
