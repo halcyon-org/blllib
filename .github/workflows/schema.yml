@@ -78,7 +78,7 @@ jobs:
         with:
           cmd: yq eval '.info.version' belifeline-schema/schema/@typespec/openapi3/openapi.yaml
         if: ${{ steps.status.outputs.status }}
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
         if: ${{ steps.status.outputs.status }}
