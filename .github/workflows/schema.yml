@@ -115,6 +115,6 @@ jobs:
     steps:
       - name: Enable auto-merge
         run: |
-          gh pr merge ${{ needs.approve.outputs.pr_url }} --merge --auto
+          gh pr merge ${{ needs.approve.outputs.pr_url }} --merge --auto --delete-branch
         env:
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
