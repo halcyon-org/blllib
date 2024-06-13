@@ -83,6 +83,8 @@ jobs:
           just gen
       - name: Check diff
         run: |
-          if [[ `git status --porcelain` ]]; then
+          RESULT=$(git status --porcelain)
+          if [[ $RESULT ]]; then
+            echo $RESULT
             exit 1
           fi
