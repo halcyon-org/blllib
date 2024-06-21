@@ -6,6 +6,12 @@ VENV_PATH :=  if os() == 'windows' {
   'env/bin'
 }
 
+POETRY_VENV_PATH :=  if os() == 'windows' {
+  '.venv/Scripts'
+} else {
+  '.venv/bin'
+}
+
 PIP_PATH := "$VENV_PATH/pip3"
 POETRY_PATH := "$VENV_PATH/poetry"
 
@@ -36,21 +42,23 @@ change-openapi_client:
 check: lint type test
 
 lint: setup-dev
-  "{{VENV_PATH}}/black" src
-  "{{VENV_PATH}}/isort" src
+  "{{POETRY_VENV_PATH}}/black" src
+  "{{POETRY_VENV_PATH}}/isort" src
 
 type: setup-dev
-  "{{VENV_PATH}}/mypy" src
+  "{{POETRY_VENV_PATH}}/mypy" src
 
-test: setup-dev mock && mock-stop
-  "{{VENV_PATH}}/pytest"
+test: mock-stop setup-dev mock test-only && mock-stop
+
+test-only:
+  "{{POETRY_VENV_PATH}}/pytest"
 
 mock:
   docker run --rm -d -p 4010:4010 --name=belifeline-mock -v $PWD/belifeline-schema/schema/@typespec/openapi3/:/tmp stoplight/prism:4 mock -h 0.0.0.0 /tmp/openapi.yaml
   until curl localhost:4010 > /dev/null 2>&1; do echo "mock-server is unavailable - waiting" && sleep 2 ; done
 
 mock-stop:
-  docker stop belifeline-mock
+  docker stop belifeline-mock; exit 0
   
 clean:
   git clean -dfX
