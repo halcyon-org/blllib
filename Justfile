@@ -48,7 +48,9 @@ lint: setup-dev
 type: setup-dev
   "{{POETRY_VENV_PATH}}/mypy" src
 
-test: mock-stop setup-dev mock && mock-stop
+test: mock-stop setup-dev mock test-only && mock-stop
+
+test-only:
   "{{POETRY_VENV_PATH}}/pytest"
 
 mock:
