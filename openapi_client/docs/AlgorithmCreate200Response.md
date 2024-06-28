@@ -9,12 +9,14 @@ Name | Type | Description | Notes
 **algorithm_name** | **str** |  | 
 **algorithm_description** | **str** |  | 
 **need_external** | [**List[ExtInfoExtInfoId]**](ExtInfoExtInfoId.md) |  | 
+**algorithm_params** | **Dict[str, str]** | param name: param default | 
 **algorithm_scales** | **List[float]** |  | 
 **algorithm_data_ids** | **List[str]** |  | 
+**version** | **str** | Semantic versioning | 
 **first_entry_at** | **datetime** |  | 
 **last_entry_at** | **datetime** |  | 
 **last_updated_at** | **datetime** |  | 
-**bearer_token** | **str** |  | 
+**api_key** | **str** |  | 
 
 ## Example
 

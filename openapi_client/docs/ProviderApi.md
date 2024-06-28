@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **each_data_get**
-> AlgorithmAlgorithmData each_data_get(altorithm_id, type, algorithm_data_id=algorithm_data_id, area=area, until=until, until_entry=until_entry, scale=scale)
+> AlgorithmAlgorithmData each_data_get(altorithm_id, type, algorithm_data_id=algorithm_data_id, area=area, until=until, until_entry=until_entry, param=param, scale=scale)
 
 
 
@@ -204,10 +204,11 @@ with openapi_client.ApiClient(configuration) as api_client:
     area = openapi_client.TypesGeoJSONMultiPolygon() # TypesGeoJSONMultiPolygon |  (optional)
     until = openapi_client.TypesDateDateUntil() # TypesDateDateUntil |  (optional)
     until_entry = openapi_client.TypesDateDateUntil() # TypesDateDateUntil |  (optional)
+    param = {'key': 'param_example'} # Dict[str, str] |  (optional)
     scale = 3.4 # float |  (optional)
 
     try:
-        api_response = api_instance.each_data_get(altorithm_id, type, algorithm_data_id=algorithm_data_id, area=area, until=until, until_entry=until_entry, scale=scale)
+        api_response = api_instance.each_data_get(altorithm_id, type, algorithm_data_id=algorithm_data_id, area=area, until=until, until_entry=until_entry, param=param, scale=scale)
         print("The response of ProviderApi->each_data_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -227,6 +228,7 @@ Name | Type | Description  | Notes
  **area** | [**TypesGeoJSONMultiPolygon**](.md)|  | [optional] 
  **until** | [**TypesDateDateUntil**](.md)|  | [optional] 
  **until_entry** | [**TypesDateDateUntil**](.md)|  | [optional] 
+ **param** | [**Dict[str, str]**](str.md)|  | [optional] 
  **scale** | **float**|  | [optional] 
 
 ### Return type

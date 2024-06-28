@@ -10,7 +10,7 @@ jobs:
           submodules: recursive
       - uses: extractions/setup-just@v2
       - name: Set up Python 3.11
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
       - name: Install poetry
@@ -73,7 +73,7 @@ jobs:
         with:
           run_install: false
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: "pnpm"

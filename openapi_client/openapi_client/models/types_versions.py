@@ -18,9 +18,9 @@ from enum import Enum
 from typing_extensions import Self
 
 
-class ProviderVersions(str, Enum):
+class TypesVersions(str, Enum):
     """
-    ProviderVersions
+    TypesVersions
     """
 
     """
@@ -30,7 +30,7 @@ class ProviderVersions(str, Enum):
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
-        """Create an instance of ProviderVersions from a JSON string"""
+        """Create an instance of TypesVersions from a JSON string"""
         return cls(json.loads(json_str))
 
 
