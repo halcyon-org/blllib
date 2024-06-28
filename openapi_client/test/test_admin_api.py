@@ -28,7 +28,6 @@ class TestAdminApi(unittest.TestCase):
 
     def test_algorithm_create(self) -> None:
         """Test case for algorithm_create
-
         """
         pass
 

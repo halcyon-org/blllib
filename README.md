@@ -2,6 +2,18 @@
 
 ## Getting started
 
+### Generating openAPI schema
+
+```bash
+openapi-generator-cli generate -i belifeline-schema/schema/\@typespec/openapi3/openapi.v0.6.0.yaml -g python -o openapi_client/
+```
+
+### Updating submodules
+
+```bash
+git submodule update --remote --recursive
+```
+
 ### Prequisites
 
 - just: [installation page](https://github.com/casey/just/releases)
