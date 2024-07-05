@@ -6,7 +6,7 @@ import json
 SYSTEM_OS = os.name
 
 if SYSTEM_OS == "nt":
-    with open("data/test_call.json", "r") as file:
+    with open("src\\blllib\\data\\test_call.json") as file:
         test_data = json.load(file)
 
 

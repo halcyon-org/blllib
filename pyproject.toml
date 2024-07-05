@@ -7,7 +7,7 @@ name = "blllib"
 version = "0.1.0"
 description = "The supporter who supports everyone(algorithm)."
 readme = "README.md"
-authors = ["shiron-dev"]
+authors = ["shiron-dev", "walterairs"]
 urls = { repository = "https://github.com/halcyon-org/blllib" }
 
 [tool.poetry.dependencies]

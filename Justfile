@@ -17,6 +17,7 @@ setup: setup-py setup-pnpm
 setup-py:
   python3 -m venv env
   {{PIP_PATH}} install poetry
+  {{PIP_PATH}} install -r src/requirements.txt
   {{POETRY_PATH}} install --only main
 
 setup-pnpm:
