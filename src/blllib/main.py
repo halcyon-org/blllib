@@ -1,7 +1,8 @@
+import json
+import os
+
 import functions_framework
 from markupsafe import escape
-import os
-import json
 
 SYSTEM_OS = os.name
 
@@ -32,6 +33,7 @@ def hello_http(request):
     else:
         name = "World"
     return f"Hello {escape(name)}!"
+
 
 if __name__ == "__main__":
     if SYSTEM_OS == "nt":

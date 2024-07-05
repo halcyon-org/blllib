@@ -4,11 +4,15 @@
 
 ### Generating openAPI schema
 
+*This script will create a open_api dir in the repository root. Please be sure to run this in the root of the repository. You might need to install the `openapi-generator-cli` to make this work.*
+
 ```bash
 openapi-generator-cli generate -i belifeline-schema/schema/\@typespec/openapi3/openapi.v0.6.0.yaml -g python -o openapi_client/
 ```
 
 ### Updating submodules
+
+Updating the submoduless within the projects is highly recomendded before the begining of further development. Do the submodule update by runnign the following command in your repository root.
 
 ```bash
 git submodule update --remote --recursive

@@ -1,8 +1,10 @@
+import unittest
+
 import blllib
 from blllib import ApiException
 
 
-class Test:
+class TestMain(unittest.TestCase):
     def test__can_call(self):
         configuration = blllib.Configuration(host="http://localhost:4010")
         configuration.api_key["ApiKeyAuth"] = "TEST_API_KEY"
@@ -12,3 +14,7 @@ class Test:
 
             api_response = api_instance.status_get()
             print(api_response)
+
+
+if __name__ == "__main__":
+    unittest.main()

@@ -13,47 +13,39 @@
 
 
 import unittest
-import blllib
+
+from blllib import AlgorithmApi
+
 
 class TestAlgorithmApi(unittest.TestCase):
     """AlgorithmApi unit test stubs"""
 
     def setUp(self) -> None:
-        self.api = blllib.AlgorithmApi()
+        self.api = AlgorithmApi()
 
     def tearDown(self) -> None:
         pass
 
     def test_algorithm_list(self) -> None:
-        """Test case for algorithm_list
-
-        """
+        """Test case for algorithm_list"""
         pass
 
     def test_each_algorithm_data_get(self) -> None:
-        """Test case for each_algorithm_data_get
-
-        """
+        """Test case for each_algorithm_data_get"""
         pass
 
     def test_each_algorithm_data_update(self) -> None:
-        """Test case for each_algorithm_data_update
-
-        """
+        """Test case for each_algorithm_data_update"""
         pass
 
     def test_each_algorithm_get(self) -> None:
-        """Test case for each_algorithm_get
-
-        """
+        """Test case for each_algorithm_get"""
         pass
 
     def test_each_algorithm_update(self) -> None:
-        """Test case for each_algorithm_update
-
-        """
+        """Test case for each_algorithm_update"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
