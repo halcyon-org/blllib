@@ -1,7 +1,10 @@
 from typing import Callable
 
+import openapi_client
 import blllib
 
 
-def create(on_start: Callable, on_update: Callable[[list[str]], None], algo_info: blllib.AlgorithmAlgorithmInfomation):
+def create(
+    on_start: Callable, on_update: Callable[[list[str]], None], algo_info: openapi_client.AlgorithmAlgorithmInfomation
+):
     return blllib.BLL(on_start=on_start, on_update=on_update, algo_info=algo_info)
