@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.algorithm_algorithm_infomation import AlgorithmAlgorithmInfomation
+from blllib import AlgorithmAlgorithmInfomation
 
 class TestAlgorithmAlgorithmInfomation(unittest.TestCase):
     """AlgorithmAlgorithmInfomation unit test stubs"""

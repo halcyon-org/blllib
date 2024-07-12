@@ -14,10 +14,10 @@
 
 import unittest
 
-from openapi_client.models.provider_request_type import ProviderRequestType
+from blllib import AlgorithmVersions
 
-class TestProviderRequestType(unittest.TestCase):
-    """ProviderRequestType unit test stubs"""
+class TestAlgorithmVersions(unittest.TestCase):
+    """AlgorithmVersions unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,9 +25,9 @@ class TestProviderRequestType(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testProviderRequestType(self):
-        """Test ProviderRequestType"""
-        # inst = ProviderRequestType()
+    def testAlgorithmVersions(self):
+        """Test AlgorithmVersions"""
+        # inst = AlgorithmVersions()
 
 if __name__ == '__main__':
     unittest.main()

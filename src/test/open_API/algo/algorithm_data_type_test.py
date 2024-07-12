@@ -14,10 +14,10 @@
 
 import unittest
 
-from openapi_client.models.ext_info_versions import ExtInfoVersions
+from blllib import AlgorithmDataType
 
-class TestExtInfoVersions(unittest.TestCase):
-    """ExtInfoVersions unit test stubs"""
+class TestAlgorithmDataType(unittest.TestCase):
+    """AlgorithmDataType unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,9 +25,9 @@ class TestExtInfoVersions(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testExtInfoVersions(self):
-        """Test ExtInfoVersions"""
-        # inst = ExtInfoVersions()
+    def testAlgorithmDataType(self):
+        """Test AlgorithmDataType"""
+        # inst = AlgorithmDataType()
 
 if __name__ == '__main__':
     unittest.main()

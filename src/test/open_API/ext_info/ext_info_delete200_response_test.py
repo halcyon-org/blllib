@@ -14,10 +14,10 @@
 
 import unittest
 
-from openapi_client.models.provider_client_data import ProviderClientData
+from blllib import ExtInfoDelete200Response
 
-class TestProviderClientData(unittest.TestCase):
-    """ProviderClientData unit test stubs"""
+class TestExtInfoDelete200Response(unittest.TestCase):
+    """ExtInfoDelete200Response unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,30 +25,26 @@ class TestProviderClientData(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> ProviderClientData:
-        """Test ProviderClientData
+    def make_instance(self, include_optional) -> ExtInfoDelete200Response:
+        """Test ExtInfoDelete200Response
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `ProviderClientData`
+        # uncomment below to create an instance of `ExtInfoDelete200Response`
         """
-        model = ProviderClientData()
+        model = ExtInfoDelete200Response()
         if include_optional:
-            return ProviderClientData(
-                client_id = '',
-                name = '',
-                api_key = ''
+            return ExtInfoDelete200Response(
+                delete_extinfo_id = 'HOGE_ID'
             )
         else:
-            return ProviderClientData(
-                client_id = '',
-                name = '',
-                api_key = '',
+            return ExtInfoDelete200Response(
+                delete_extinfo_id = 'HOGE_ID',
         )
         """
 
-    def testProviderClientData(self):
-        """Test ProviderClientData"""
+    def testExtInfoDelete200Response(self):
+        """Test ExtInfoDelete200Response"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

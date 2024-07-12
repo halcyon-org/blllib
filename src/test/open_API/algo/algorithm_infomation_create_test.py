@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.algorithm_algorithm_infomation_create import AlgorithmAlgorithmInfomationCreate
+from blllib import AlgorithmAlgorithmInfomationCreate
 
 class TestAlgorithmAlgorithmInfomationCreate(unittest.TestCase):
     """AlgorithmAlgorithmInfomationCreate unit test stubs"""

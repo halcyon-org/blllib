@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.algorithm_create200_response import AlgorithmCreate200Response
+from blllib import AlgorithmCreate200Response
 
 class TestAlgorithmCreate200Response(unittest.TestCase):
     """AlgorithmCreate200Response unit test stubs"""

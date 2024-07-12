@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.each_algorithm_data_update_request import EachAlgorithmDataUpdateRequest
+from blllib import EachAlgorithmDataUpdateRequest
 
 class TestEachAlgorithmDataUpdateRequest(unittest.TestCase):
     """EachAlgorithmDataUpdateRequest unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.client_create_request import ClientCreateRequest
+from blllib import ClientCreateRequest
 
 class TestClientCreateRequest(unittest.TestCase):
     """ClientCreateRequest unit test stubs"""

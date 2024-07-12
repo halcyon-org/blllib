@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.ext_info_create_request import ExtInfoCreateRequest
+from blllib import ExtInfoCreateRequest
 
 class TestExtInfoCreateRequest(unittest.TestCase):
     """ExtInfoCreateRequest unit test stubs"""

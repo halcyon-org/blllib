@@ -14,10 +14,10 @@
 
 import unittest
 
-from openapi_client.models.ext_info_ext_info_id import ExtInfoExtInfoId
+from blllib import ProviderVersions
 
-class TestExtInfoExtInfoId(unittest.TestCase):
-    """ExtInfoExtInfoId unit test stubs"""
+class TestProviderVersions(unittest.TestCase):
+    """ProviderVersions unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,9 +25,9 @@ class TestExtInfoExtInfoId(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testExtInfoExtInfoId(self):
-        """Test ExtInfoExtInfoId"""
-        # inst = ExtInfoExtInfoId()
+    def testProviderVersions(self):
+        """Test ProviderVersions"""
+        # inst = ProviderVersions()
 
 if __name__ == '__main__':
     unittest.main()
