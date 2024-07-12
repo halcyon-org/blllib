@@ -3,6 +3,14 @@ import os
 
 import functions_framework
 from markupsafe import escape
+import openapi_client
+
+#print(dir(openapi_client))
+print(dir(openapi_client.models.client_delete200_response))
+
+create = openapi_client.models.client_delete200_response
+print(create)
+
 
 SYSTEM_OS = os.name
 

@@ -15,6 +15,7 @@
 import unittest
 
 from blllib import AlgorithmCreateRequest
+import blllib
 
 class TestAlgorithmCreateRequest(unittest.TestCase):
     """AlgorithmCreateRequest unit test stubs"""
@@ -31,11 +32,11 @@ class TestAlgorithmCreateRequest(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `AlgorithmCreateRequest`
-        """
+        
         model = AlgorithmCreateRequest()
         if include_optional:
             return AlgorithmCreateRequest(
-                algorithm = openapi_client.models.algorithm/algorithm_infomation_create.Algorithm.AlgorithmInfomationCreate(
+                algorithm = blllib.models.algorithm/algorithm_infomation_create.Algorithm.AlgorithmInfomationCreate(
                     algorithm_name = '', 
                     algorithm_description = '', 
                     need_external = [
@@ -63,7 +64,7 @@ class TestAlgorithmCreateRequest(unittest.TestCase):
                         ''
                         ], ),
         )
-        """
+       
 
     def testAlgorithmCreateRequest(self):
         """Test AlgorithmCreateRequest"""

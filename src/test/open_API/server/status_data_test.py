@@ -14,7 +14,7 @@
 
 import unittest
 
-from blllib import StatusData
+from blllib import models
 
 class TestStatusData(unittest.TestCase):
     """StatusData unit test stubs"""
@@ -25,7 +25,7 @@ class TestStatusData(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> StatusData:
+    def make_instance(self, include_optional):
         """Test StatusData
             include_option is a boolean, when False only required
             params are included, when True both required and

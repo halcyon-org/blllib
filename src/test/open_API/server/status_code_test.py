@@ -14,7 +14,9 @@
 
 import unittest
 
-from blllib import StatusCode
+from blllib import models
+
+print(models)
 
 class TestStatusCode(unittest.TestCase):
     """StatusCode unit test stubs"""
@@ -27,7 +29,8 @@ class TestStatusCode(unittest.TestCase):
 
     def testStatusCode(self):
         """Test StatusCode"""
-        # inst = StatusCode()
+        inst = models
+        print(inst)
 
 if __name__ == '__main__':
     unittest.main()
