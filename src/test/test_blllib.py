@@ -1,5 +1,6 @@
-import pytest
 from datetime import datetime
+
+import pytest
 
 import blllib
 
@@ -10,7 +11,7 @@ check_update = False
 class TestBllib:
     def test__use_case_create(self):
 
-        def on_start(self):
+        def on_start(self: blllib.BLL):
             global check_start
             check_start = True
 

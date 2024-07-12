@@ -1,11 +1,12 @@
-from pydantic.dataclasses import dataclass
-from pydantic import StrictStr
-from typing import Callable, Self, Type
-from enum import Enum
-
-import urllib.parse
-import openapi_client
 import pprint
+import urllib.parse
+from enum import Enum
+from typing import Callable, Self, Type
+
+from pydantic import StrictStr
+from pydantic.dataclasses import dataclass
+
+import openapi_client
 
 
 class EventTag(Enum):
@@ -42,12 +43,25 @@ class BLL:
 
     def entry(self):
         with openapi_client.ApiClient(self._configuration) as api_client:
-            openapi_client.AlgorithmAlgorithmInfomationCreateOrUpdate(
-                api_client,
-                algorithm_id=self.algo_info.algorithm_id,
-                algorithm_name=self.algo_info.algorithm_name,
-                algorithm_description=self.algo_info.algorithm_description,
-                need_external=self.algo_info.need_external,
-                algorithm_scales=self.algo_info.algorithm_scales,
-                algorithm_data_ids=self.algo_info.algorithm_data_ids,
+            api_instance = openapi_client.AlgorithmApi(api_client)
+            request = openapi_client.EachAlgorithmUpdateRequest(
+                update_algorithm=openapi_client.AlgorithmAlgorithmInfomationCreateOrUpdate(
+                    algorithm_id=self.algo_info.algorithm_id,
+                    algorithm_name=self.algo_info.algorithm_name,
+                    algorithm_description=self.algo_info.algorithm_description,
+                    need_external=self.algo_info.need_external,
+                    algorithm_scales=self.algo_info.algorithm_scales,
+                    algorithm_data_ids=self.algo_info.algorithm_data_ids,
+                )
             )
+            import pprint
+
+            pprint.pprint(request)
+
+            try:
+                api_response = api_instance.each_algorithm_update(
+                    algorithm_id=self.algo_info.algorithm_id, each_algorithm_update_request=request
+                )
+                return api_response
+            except openapi_client.ApiException as e:
+                print(f"Exception when calling AlgorithmApi: {e}")
