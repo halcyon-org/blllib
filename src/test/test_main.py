@@ -1,8 +1,7 @@
 import blllib
-from blllib import ApiException
 
 
-class Test:
+class TestOpenApiClient:
     def test__can_call_client(self):
         configuration = blllib.Configuration(host="http://localhost:4010")
         configuration.api_key["ApiKeyAuth"] = "TEST_API_KEY"
