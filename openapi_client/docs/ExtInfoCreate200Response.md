@@ -5,13 +5,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**external_id** | [**ExtInfoExtInfoId**](ExtInfoExtInfoId.md) |  | 
+**external_id** | [**ExtInfoExtInfoId**](ExtInfoExtInfoId.md) | This ID can be obtained through admin api. It is a human friendly format like GitHub repository names. Only the pattern &#x60;^[a-z_-]{1,64}$&#x60; is allowed. | 
 **external_name** | **str** |  | 
 **external_description** | **str** |  | 
+**license** | **str** |  | 
+**license_description** | **str** |  | 
 **first_entry_at** | **datetime** |  | 
 **last_updated_at** | **datetime** |  | 
 **updated_history** | **List[datetime]** |  | 
-**bearer_token** | **str** |  | 
+**api_key** | **str** |  | 
 
 ## Example
 
