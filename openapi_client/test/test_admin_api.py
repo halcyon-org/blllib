@@ -19,6 +19,7 @@ from openapi_client.api.admin_api import AdminApi
 
 class TestAdminApi(unittest.TestCase):
     """AdminApi unit test stubs"""
+    
 
     def setUp(self) -> None:
         self.api = AdminApi()
@@ -28,9 +29,7 @@ class TestAdminApi(unittest.TestCase):
 
     def test_client_create(self) -> None:
         """Test case for client_create
-
         """
-        pass
 
     def test_client_delete(self) -> None:
         """Test case for client_delete
