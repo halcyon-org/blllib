@@ -7,7 +7,7 @@
 *This script will create a open_api dir in the repository root. Please be sure to run this in the root of the repository. You might need to install the `openapi-generator-cli` to make this work.*
 
 ```bash
-openapi-generator-cli generate -i belifeline-schema/schema/\@typespec/openapi3/openapi.v0.6.0.yaml -g python -o openapi_client/
+openapi-generator-cli generate -i belifeline-schema/schema/\@typespec/openapi3/openapi.v0.7.2.yaml -g python -o openapi_client/
 ```
 
 ### Updating submodules
