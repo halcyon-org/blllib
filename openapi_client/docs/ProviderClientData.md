@@ -1,13 +1,17 @@
 # ProviderClientData
 
+Data for the client to use the provider api.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **client_id** | **str** |  | 
-**name** | **str** |  | 
+**username** | **str** |  | 
 **api_key** | **str** |  | 
+**created_at** | **datetime** |  | 
+**last_used_at** | **datetime** | The last time the client used the api. | 
+**last_updated_at** | **datetime** | The last time the client updated the data. | 
 
 ## Example
 
