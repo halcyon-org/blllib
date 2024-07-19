@@ -8,6 +8,8 @@ from pydantic.dataclasses import dataclass
 
 import openapi_client
 
+import blllib.bll_client as blllib_client
+
 
 class EventTag(Enum):
     START = "start"
@@ -19,8 +21,8 @@ class BLL:
 
     def __new__(
         self,
-        on_start: Callable[[], None],
-        on_update: Callable[[list[StrictStr]], None],
+        on_start: Callable[[Self], None],
+        on_update: Callable[[Self, list[StrictStr]], None],
         algo_info: openapi_client.AlgorithmAlgorithmInfomation,
     ):
         self.on_start = on_start
@@ -37,9 +39,9 @@ class BLL:
         self._configuration = openapi_client.Configuration(host=host)
         self._configuration.api_key["ApiKeyAuth"] = api_key
         if argv[0] == EventTag.START.value:
-            self.on_start()
+            self.on_start()  # type: ignore
         elif argv[0] == EventTag.UPDATE.value:
-            self.on_update([])
+            self.on_update([])  # type: ignore
 
     def entry(self):
         with openapi_client.ApiClient(self._configuration) as api_client:
