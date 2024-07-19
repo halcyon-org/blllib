@@ -6,9 +6,8 @@ from typing import Callable, Self, Type
 from pydantic import StrictStr
 from pydantic.dataclasses import dataclass
 
-import openapi_client
-
 import blllib.bll_client as blllib_client
+import openapi_client
 
 
 class EventTag(Enum):
