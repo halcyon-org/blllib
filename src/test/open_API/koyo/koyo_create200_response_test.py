@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.koyo_create200_response import KoyoCreate200Response
+from blllib import KoyoCreate200Response
 
 class TestKoyoCreate200Response(unittest.TestCase):
     """KoyoCreate200Response unit test stubs"""

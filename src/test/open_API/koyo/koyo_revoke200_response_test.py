@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.koyo_revoke200_response import KoyoRevoke200Response
+from blllib import models
 
 class TestKoyoRevoke200Response(unittest.TestCase):
     """KoyoRevoke200Response unit test stubs"""
@@ -25,7 +25,7 @@ class TestKoyoRevoke200Response(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> KoyoRevoke200Response:
+    def make_instance(self, include_optional) -> models.KoyoRevoke200Response:
         """Test KoyoRevoke200Response
             include_option is a boolean, when False only required
             params are included, when True both required and

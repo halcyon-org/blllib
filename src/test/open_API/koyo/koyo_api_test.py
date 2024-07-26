@@ -13,8 +13,7 @@
 
 
 import unittest
-
-from openapi_client.api.koyo_api import KoyoApi
+from blllib import KoyoApi
 
 
 class TestKoyoApi(unittest.TestCase):

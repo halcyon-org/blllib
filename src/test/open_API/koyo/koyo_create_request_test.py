@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.koyo_create_request import KoyoCreateRequest
+from blllib import KoyoCreateRequest
 
 class TestKoyoCreateRequest(unittest.TestCase):
     """KoyoCreateRequest unit test stubs"""

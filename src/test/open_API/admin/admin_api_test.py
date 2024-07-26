@@ -41,7 +41,8 @@ class TestAdminApi(unittest.TestCase):
         """Test case for client_delete
 
         """
-        pass
+        delete_client_id = "0039699a-32b9-497c-85be-d8da489c441f"
+        self.api.client_delete(delete_client_id)
 
     def test_client_list(self) -> None:
         """Test case for client_list

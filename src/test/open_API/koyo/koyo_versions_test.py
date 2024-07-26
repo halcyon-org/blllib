@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.koyo_versions import KoyoVersions
+from blllib import models
 
 class TestKoyoVersions(unittest.TestCase):
     """KoyoVersions unit test stubs"""

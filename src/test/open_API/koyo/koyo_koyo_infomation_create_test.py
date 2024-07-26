@@ -14,10 +14,10 @@
 
 import unittest
 
-from openapi_client.models.koyo_koyo_infomation_create_or_update import KoyoKoyoInfomationCreateOrUpdate
+from blllib import models
 
-class TestKoyoKoyoInfomationCreateOrUpdate(unittest.TestCase):
-    """KoyoKoyoInfomationCreateOrUpdate unit test stubs"""
+class TestKoyoKoyoInfomationCreate(unittest.TestCase):
+    """KoyoKoyoInfomationCreate unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,17 +25,16 @@ class TestKoyoKoyoInfomationCreateOrUpdate(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> KoyoKoyoInfomationCreateOrUpdate:
-        """Test KoyoKoyoInfomationCreateOrUpdate
+    def make_instance(self, include_optional) -> models.KoyoKoyoInfomationCreate:
+        """Test KoyoKoyoInfomationCreate
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `KoyoKoyoInfomationCreateOrUpdate`
+        # uncomment below to create an instance of `KoyoKoyoInfomationCreate`
         """
-        model = KoyoKoyoInfomationCreateOrUpdate()
+        model = KoyoKoyoInfomationCreate()
         if include_optional:
-            return KoyoKoyoInfomationCreateOrUpdate(
-                koyo_id = 'wqyzkkciwg_n-wcqj_hcorcasz_uagjkdkamsgqefb_lv_h',
+            return KoyoKoyoInfomationCreate(
                 koyo_name = '0',
                 koyo_description = '',
                 need_external = [
@@ -57,8 +56,7 @@ class TestKoyoKoyoInfomationCreateOrUpdate(unittest.TestCase):
                     ]
             )
         else:
-            return KoyoKoyoInfomationCreateOrUpdate(
-                koyo_id = 'wqyzkkciwg_n-wcqj_hcorcasz_uagjkdkamsgqefb_lv_h',
+            return KoyoKoyoInfomationCreate(
                 koyo_name = '0',
                 koyo_description = '',
                 need_external = [
@@ -81,8 +79,8 @@ class TestKoyoKoyoInfomationCreateOrUpdate(unittest.TestCase):
         )
         """
 
-    def testKoyoKoyoInfomationCreateOrUpdate(self):
-        """Test KoyoKoyoInfomationCreateOrUpdate"""
+    def testKoyoKoyoInfomationCreate(self):
+        """Test KoyoKoyoInfomationCreate"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

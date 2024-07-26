@@ -14,7 +14,8 @@
 
 import unittest
 
-from openapi_client.models.koyo_koyo_data import KoyoKoyoData
+import blllib
+print(dir(blllib))
 
 class TestKoyoKoyoData(unittest.TestCase):
     """KoyoKoyoData unit test stubs"""

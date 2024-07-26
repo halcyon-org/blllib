@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.koyo_koyo_data_create import KoyoKoyoDataCreate
+from blllib import models
 
 class TestKoyoKoyoDataCreate(unittest.TestCase):
     """KoyoKoyoDataCreate unit test stubs"""
@@ -25,7 +25,7 @@ class TestKoyoKoyoDataCreate(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> KoyoKoyoDataCreate:
+    def make_instance(self, include_optional) -> models.KoyoKoyoDataCreate:
         """Test KoyoKoyoDataCreate
             include_option is a boolean, when False only required
             params are included, when True both required and

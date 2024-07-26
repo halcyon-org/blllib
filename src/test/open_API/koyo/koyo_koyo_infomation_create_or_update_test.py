@@ -14,10 +14,10 @@
 
 import unittest
 
-from openapi_client.models.koyo_koyo_infomation import KoyoKoyoInfomation
+from blllib import models
 
-class TestKoyoKoyoInfomation(unittest.TestCase):
-    """KoyoKoyoInfomation unit test stubs"""
+class TestKoyoKoyoInfomationCreateOrUpdate(unittest.TestCase):
+    """KoyoKoyoInfomationCreateOrUpdate unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,16 +25,16 @@ class TestKoyoKoyoInfomation(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> KoyoKoyoInfomation:
-        """Test KoyoKoyoInfomation
+    def make_instance(self, include_optional) -> models.KoyoKoyoInfomationCreateOrUpdate:
+        """Test KoyoKoyoInfomationCreateOrUpdate
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `KoyoKoyoInfomation`
+        # uncomment below to create an instance of `KoyoKoyoInfomationCreateOrUpdate`
         """
-        model = KoyoKoyoInfomation()
+        model = KoyoKoyoInfomationCreateOrUpdate()
         if include_optional:
-            return KoyoKoyoInfomation(
+            return KoyoKoyoInfomationCreateOrUpdate(
                 koyo_id = 'wqyzkkciwg_n-wcqj_hcorcasz_uagjkdkamsgqefb_lv_h',
                 koyo_name = '0',
                 koyo_description = '',
@@ -54,13 +54,10 @@ class TestKoyoKoyoInfomation(unittest.TestCase):
                 license = '',
                 ext_licenses = [
                     ''
-                    ],
-                first_entry_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
-                last_entry_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
-                last_updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
+                    ]
             )
         else:
-            return KoyoKoyoInfomation(
+            return KoyoKoyoInfomationCreateOrUpdate(
                 koyo_id = 'wqyzkkciwg_n-wcqj_hcorcasz_uagjkdkamsgqefb_lv_h',
                 koyo_name = '0',
                 koyo_description = '',
@@ -81,14 +78,11 @@ class TestKoyoKoyoInfomation(unittest.TestCase):
                 ext_licenses = [
                     ''
                     ],
-                first_entry_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
-                last_entry_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
-                last_updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
         )
         """
 
-    def testKoyoKoyoInfomation(self):
-        """Test KoyoKoyoInfomation"""
+    def testKoyoKoyoInfomationCreateOrUpdate(self):
+        """Test KoyoKoyoInfomationCreateOrUpdate"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 
