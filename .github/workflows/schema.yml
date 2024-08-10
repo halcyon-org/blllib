@@ -60,7 +60,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: ${{ steps.status.outputs.status }}
-      - uses: mikefarah/yq@v4.44.2
+      - uses: mikefarah/yq@v4.44.3
         id: schema_ver
         with:
           cmd: yq eval '.info.version' belifeline-schema/schema/@typespec/openapi3/openapi.yaml
@@ -73,7 +73,7 @@ jobs:
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
         if: ${{ steps.status.outputs.status }}
       - run: git checkout HEAD^
-      - uses: mikefarah/yq@v4.44.2
+      - uses: mikefarah/yq@v4.44.3
         id: before_ver
         with:
           cmd: yq eval '.info.version' belifeline-schema/schema/@typespec/openapi3/openapi.yaml
