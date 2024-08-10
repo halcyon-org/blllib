@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.0](https://github.com/halcyon-org/blllib/compare/v0.1.0...v0.2.0) (2024-08-10)
+
+
+### Features
+
+* release lib ([#55](https://github.com/halcyon-org/blllib/issues/55)) ([30f40ef](https://github.com/halcyon-org/blllib/commit/30f40ef371ce2718446658c294130a79ff788e8a))
+* update schema ([5899a29](https://github.com/halcyon-org/blllib/commit/5899a293ae7eb85312fc57f85366fdf61a85cec1))
+* update schema ([2092058](https://github.com/halcyon-org/blllib/commit/20920584c3f60c26ea242b93c7aa58def0e08ed4))
+
 ## 0.1.0 (2024-06-02)
 
 
