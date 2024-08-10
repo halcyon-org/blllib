@@ -1,11 +1,12 @@
 # ProviderClientDataCreate
 
+Data for the client to use the provider api.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** |  | 
+**username** | **str** |  | 
 
 ## Example
 

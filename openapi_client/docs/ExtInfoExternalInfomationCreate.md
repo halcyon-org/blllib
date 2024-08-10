@@ -1,5 +1,6 @@
 # ExtInfoExternalInfomationCreate
 
+Basic information about the external information.
 
 ## Properties
 
@@ -7,6 +8,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **external_name** | **str** |  | 
 **external_description** | **str** |  | 
+**license** | **str** |  | 
+**license_description** | **str** |  | 
 **first_entry_at** | **datetime** |  | 
 **last_updated_at** | **datetime** |  | 
 **updated_history** | **List[datetime]** |  | 
