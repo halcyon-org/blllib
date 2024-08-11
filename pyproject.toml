@@ -9,6 +9,8 @@ description = "The supporter who supports everyone(algorithm)."
 readme = "README.md"
 authors = ["shiron-dev"]
 urls = { repository = "https://github.com/halcyon-org/blllib" }
+# packages = [{ include = "blllib", from = "src" }]
+# exclude = ["src/test"]
 
 [tool.poetry.dependencies]
 python = ">=3.11"
@@ -21,10 +23,9 @@ black = "*"
 isort = "*"
 mypy = "*"
 
-
 [tool.setuptools.packages.find]
 where = ["src"]
-exclude = ["tests"]
+exclude = ["test"]
 namespaces = false
 
 [tool.black]
@@ -39,6 +40,5 @@ testpaths = ["src/test"]
 
 [tool.mypy]
 python_version = "3.11"
-no_strict_optional = true
 ignore_missing_imports = true
 check_untyped_defs = true
