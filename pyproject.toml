@@ -13,6 +13,7 @@ urls = { repository = "https://github.com/halcyon-org/blllib" }
 [tool.poetry.dependencies]
 python = ">=3.11"
 openapi_client = { path = "./openapi_client" }
+pydantic = "*"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"

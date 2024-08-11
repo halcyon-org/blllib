@@ -13,5 +13,5 @@ class TestOpenApiClient:
             print(api_response)
 
     def test__can_call_create_client(self):
-        bll = blllib.create(on_start=None, on_update=None, algo_info=None)
+        bll = blllib.create(on_start=None, on_update=None, koyo_info=None)
         print(bll)
