@@ -11,7 +11,7 @@ authors = ["shiron-dev"]
 urls = { repository = "https://github.com/halcyon-org/blllib" }
 
 [tool.poetry.dependencies]
-python = ">=3.11"
+python = ">=3.13.0"
 openapi_client = { path = "./openapi_client" }
 
 [tool.poetry.dev-dependencies]
