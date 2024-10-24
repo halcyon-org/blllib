@@ -10,7 +10,7 @@
   "author": "shiron-dev <shiron4710.dev@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "@openapitools/openapi-generator-cli": "^2.13.4"
+    "@openapitools/openapi-generator-cli": "^2.14.1"
   },
   "packageManager": "pnpm@9.7.0"
 }
